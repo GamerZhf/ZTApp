@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="GB2312"?>
+<?xml version="1.0" encoding="GB2312"?>
 <JoyCard>
 	<!--右侧提示按钮：tips，悬浮提示；num，图片数量（一般为1）；-->
 	<tipButton tips="卡牌游戏" num="1" pack="data\interfaces.gl" group="131" frame="4"/>
