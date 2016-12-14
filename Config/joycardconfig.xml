@@ -1,0 +1,1255 @@
+﻿<?xml version="1.0" encoding="GB2312"?>
+<JoyCard>
+	<!--右侧提示按钮：tips，悬浮提示；num，图片数量（一般为1）；-->
+	<tipButton tips="卡牌游戏" num="1" pack="data\interfaces.gl" group="131" frame="4"/>
+	<!--鼠标放到卡牌上的悬浮提示-->
+	<tooltips back="单击卡牌"/>
+	<!--图文帮助false关闭 true开启-->
+	<helpPages active="true">
+		<page name="1" pack="data\interfaces.gl" group="256" frame="75" prevPage="" nextPage=""/>
+	</helpPages>
+	<!--右侧提示信息（作废）-->
+	<rightInfo>%a5%%c255 85 255 155%信息提示：%n%    卡牌游戏可获得%c255 250 150 50%15星紫色马匹装备%c255 85 255 155%、%c255 250 150 50%10星神圣祝福装备%c255 85 255 155%、%c255 250 150 50%1万张材料卡%c255 85 255 155%、%c255 250 150 50%2千个无暇%c255 85 255 155%、%c255 250 150 50%10资质幻影%c255 85 255 155%、%c255 250 150 50%绝世神兵%c255 85 255 155%等等超级大奖!</rightInfo>
+	<!--右侧提示信息-->
+	<rightItemInfo>
+		<item id="3526" name="欢乐卡牌" quantifier="张"/>
+		<item id="3564" name="紫金龙鳞" quantifier="个"/>
+	</rightItemInfo>
+	<skin>
+		<okBtn> button text=%确定% a=255 r=235 g=165 b=55 group=256 frame=7 width=100 height=32 data=1 hotkey=Enter</okBtn>
+		<cancelBtn> button text=%取消% a=255 r=235 g=165 b=55 group=256 frame=7 width=100 height=32 data=0 hotkey=Esc</cancelBtn>
+		<msgBox> image group=256 frame=21 top=17 bottom=177 left=21 right=478 textArea x=17 y=14 width=506 height=121 </msgBox>
+		<modeMsgBox> image group=256 frame=38 top=37 bottom=383 left=22 right=479 textArea x=50 y=43 width=430 height=259 </modeMsgBox>
+		<modeBtn> button text=%普通模式% a=255 r=235 g=165 b=55 group=256 frame=7 x=111 width=100 height=32 data=1 button text=%血战到底% a=255 r=235 g=165 b=55 group=256 frame=7 x=278 width=100 height=32 data=0 button text=%% group=256 frame=1 x=457 y=34 data=2 </modeBtn>
+		<itemMsgBox> image group=256 frame=21 top=17 bottom=178 left=29 right=490 textArea x=36 y=17 width=448 height=121 </itemMsgBox>
+		<itemBtn> button text=%确 定% a=255 r=235 g=165 b=55 group=256 frame=7 width=100 height=32 data=1 hotkey=Enter button text=%取 消% a=255 r=235 g=165 b=55 group=256 frame=7 width=100 height=32 data=0 hotkey=Esc</itemBtn>
+	</skin>
+	<!--道具刷新提示-->
+	<flushItemTips>
+		<quality color="5"/>
+	</flushItemTips>
+	<!-- 玩每轮游戏所需的金子数-->
+	<goldNeeds maxRound="4">
+		<!-- 某一轮的配置：round，第几轮；gold，需要的金子数，文为单位; tips, 每轮开始前弹出的提示-->
+		<!--tips信息的格式 : 一对 % 里的数据表示对字体颜色等的格式设置，总的如下
+		 %%：表示显示%字符本身；
+		 %c255 255 0 200%：表示以后的字的颜色都为紫色
+		 %n%：换行
+		 %a 1%：对齐方式
+		    Top_Left         5
+		    Top_Middle       4
+		    Top_Right        6
+		    Middle_Left      1
+		    Middle_Middle    0
+		    Middle_Right     2
+		    Bottom_Left      9
+		    Bottom_Middle    8
+		    Bottom_Right    10
+		 %w 28%: 一行文字的总的字符数（这个信息是为了对齐用的，可以不配置，程序会自动计算）
+		 %h 5%: 弹出的提示对话框总共显示几行信息（这个得和gui界面配合才行，可以不配置，程序会自动计算）
+		-->
+		<goldNeed round="1" gold="100" tips="%a0%%c255 250 150 50%开始第一轮欢乐卡牌游戏需%c255 85 255 155%使用1个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏共分四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.每抽选一张卡牌即可获得对应的道具。"/>
+		<goldNeed round="2" gold="200" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用2个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+		<goldNeed round="3" gold="400" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用4个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+		<goldNeed round="4" gold="800" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用8个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+		<goldNeed round="5" gold="1500" tips="%a0%%c255 250 150 50%开始一局欢乐卡牌游戏需%c255 85 255 155%使用15个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏可玩四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.此模式下如果玩家对获得的道具不满意可回退道具。"/>
+		<!--回退道具的信息：maxRound +2-->
+		<goldNeed round="6" gold="0" tips="%a0%%c255 250 150 50%可回退道具给系统，系统返还10个紫金龙鳞。%n1%"/>
+	</goldNeeds>
+	<!--回退道具-->
+	<BackReward>
+		<p>
+			<n color="255,250,150,50">可回退道具给系统，系统返还</n>
+			<object id="3564" textcolor="255,0,255,0" HideBkImg="true"/>
+			<n color="255,250,150,50">x10或</n>
+			<object id="657863" textcolor="255,0,255,0" HideBkImg="true"/>
+			<n color="255,250,150,50">x1</n>
+		</p>
+	</BackReward>
+	<!--获得紫奖的最大消费金额-->
+	<consume processMax="60000"/>
+	<!--欢乐卡牌积分榜第一名能够领取玉娇龙之心所必须达到的最低分-->
+	<YuJiaoLongHeartRequest requestPoints="1000"/>
+	<!-- 为最小化时，动画速度-->
+	<animationTimes>
+		<!-- 卡牌游戏界面上，各种动画的时间长度配置-->
+		<!-- 刷新卡牌道具动画的时长: time,动画时间长度，秒为单位; maxTimes: 允许的最大刷新卡牌道具次数 bloodMaxTimes: 血战模式下允许的最大刷新卡牌道具次数-->
+		<flushTime time="0.45" maxTimes="3" bloodMaxTimes="6"/>
+		<!-- 翻转一般卡牌动画的时间: time,动画时间长度，秒为单位-->
+		<turnNormalTime time="0.15"/>
+		<!-- 快速翻转卡牌的时间: time,动画时间长度，秒为单位-->
+		<turnFastTime time="0.1"/>
+		<!-- 将卡牌移动到展区的动画的时长: time,动画时间长度，秒为单位-->
+		<moveTime time="0.2"/>
+		<!-- 洗牌的动画的总时长: time,动画时间长度，秒为单位; times：每次洗牌，每张卡需要移动的次数-->
+		<shuffleTime time="0.8" times="4"/>
+	</animationTimes>
+	<!-- 自动开卡，最小化速度-->
+	<animationTimes>
+		<!-- 刷新卡牌道具动画的时长: time,动画时间长度，秒为单位; maxTimes: 允许的最大刷新卡牌道具次数 bloodMaxTimes: 血战模式下允许的最大刷新卡牌道具次数-->
+		<flushTime time="0.001" maxTimes="3" bloodMaxTimes="6"/>
+		<!-- 翻转一般卡牌动画的时间: time,动画时间长度，秒为单位-->
+		<turnNormalTime time="0.001"/>
+		<!-- 快速翻转卡牌的时间: time,动画时间长度，秒为单位-->
+		<turnFastTime time="0.001"/>
+		<!-- 将卡牌移动到展区的动画的时长: time,动画时间长度，秒为单位-->
+		<moveTime time="0.001"/>
+		<!-- 洗牌的动画的总时长: time,动画时间长度，秒为单位; times：每次洗牌，每张卡需要移动的次数-->
+		<shuffleTime time="0.001" times="1"/>
+	</animationTimes>
+	<!-- 卡牌游戏各种声音效果配置-->
+	<sounds>
+		<!-- 一项效果配置：index, 声音文件在sound.pak包的ui文件夹中的索引；
+		      type，声音类型，罗列如下：
+		        1,  选中卡牌
+		        2,  翻牌
+		        3,  洗牌
+		        4,  奖牌移到展示区
+		        5,  中大奖（紫奖）
+				6,   触发龙宫模式时的声音特效
+		-->
+		<sound type="1" index="91022"/>
+		<sound type="2" index="91023"/>
+		<sound type="3" index="91026"/>
+		<sound type="4" index="91024"/>
+		<sound type="5" index="91025"/>
+		<sound type="6" index="91027"/>
+	</sounds>
+	<!-- 卡牌界面图片资源-->
+	<cardImgs>
+		<!-- 被选中卡牌的光圈动画-->
+		<circleImg pack="data\interfaces.gl" group="256" frame="19"/>
+		<!-- 卡牌的背面底图-->
+		<backBgImg pack="data\interfaces.gl" group="256" frame="10"/>
+		<!-- 白金卡牌的背面底图-->
+		<baijinbackBgImg pack="data\interfaces2.gl" group="217" frame="330"/>
+		<!--紫色卡牌正面背景动画资源-->
+		<purpleImg pack="data\interfaces.gl" group="256" frame="63"/>
+		<!--金卡特效资源-->
+		<goldCardImg pack="data\interfaces.gl" group="256" frame="111"/>
+		<!-- 卡牌翻牌动画资源-->
+		<turnImgs>
+			<!-- quality, 卡牌关联的道具的资质（颜色）-->
+			<img quality="1" pack="data\interfaces.gl" group="256" frame="22"/>
+			<img quality="2" pack="data\interfaces.gl" group="256" frame="23"/>
+			<img quality="3" pack="data\interfaces.gl" group="256" frame="24"/>
+			<img quality="4" pack="data\interfaces.gl" group="256" frame="25"/>
+			<img quality="5" pack="data\interfaces.gl" group="256" frame="26"/>
+			<img quality="6" pack="data\interfaces.gl" group="256" frame="153"/>
+			<img quality="7" pack="data\interfaces.gl" group="256" frame="157"/>
+			<img quality="8" pack="data\interfaces2.gl" group="217" frame="337"/>
+			<img quality="9" pack="data\interfaces2.gl" group="217" frame="338"/>
+			<img quality="0" pack="data\interfaces.gl" group="256" frame="18"/>
+		</turnImgs>
+		<!-- 卡牌的正面底图：正面底图跟卡牌所关联的道具的资质（即颜色）有关。参照服务端的配置有：1：白色 2：蓝色 3：黄色 4：绿色 5：紫色-->
+		<frontBgImgs>
+			<!-- 一张正面底图：quality, 卡牌关联的道具的资质（颜色）-->
+			<img quality="1" pack="data\interfaces.gl" group="256" frame="11"/>
+			<img quality="2" pack="data\interfaces.gl" group="256" frame="12"/>
+			<img quality="3" pack="data\interfaces.gl" group="256" frame="13"/>
+			<img quality="4" pack="data\interfaces.gl" group="256" frame="14"/>
+			<img quality="5" pack="data\interfaces.gl" group="256" frame="15"/>
+			<img quality="6" pack="data\interfaces.gl" group="256" frame="154"/>
+			<img quality="7" pack="data\interfaces.gl" group="256" frame="156"/>
+			<img quality="8" pack="data\interfaces2.gl" group="217" frame="332"/>
+			<img quality="9" pack="data\interfaces2.gl" group="217" frame="331"/>
+			<img quality="0" pack="data\interfaces.gl" group="256" frame="16"/>
+		</frontBgImgs>
+		<!--卡牌道具框特效图片-->
+		<itemFrameImgs>
+			<img quality="0" pack="data\interfaces.gl" group="256" frame="29"/>
+			<img quality="0" pack="data\interfaces.gl" group="256" frame="31"/>
+			<img quality="0" pack="data\interfaces.gl" group="256" frame="30"/>
+			<img quality="4" pack="data\interfaces.gl" group="3" frame="101"/>
+			<img quality="5" pack="data\interfaces.gl" group="3" frame="102"/>
+			<img quality="6" pack="data\interfaces.gl" group="3" frame="923"/>
+			<img quality="7" pack="data\interfaces.gl" group="3" frame="923"/>
+			<img quality="8" pack="data\interfaces.gl" group="3" frame="101"/>
+			<img quality="9" pack="data\interfaces.gl" group="3" frame="102"/>
+			<img quality="0" pack="data\interfaces.gl" group="256" frame="29"/>
+		</itemFrameImgs>
+		<!--卡牌各种图片的几何信息-->
+		<geomInfos>
+			<!--卡牌尺寸大小；space，卡牌的横向间距-->
+			<card width="80" height="114" space="10"/>
+			<!--背景图片位置相对卡牌位置的偏移量（阴影和镂空会造成这种偏移量）-->
+			<bgImg offsetX="-6" offsetY="-3"/>
+			<!--光圈动画位置相对卡牌位置的偏移量（阴影和镂空会造成这种偏移量）-->
+			<circleImg offsetX="-92" offsetY="-88"/>
+			<!--卡牌道具框特效动画位置相对卡牌位置的偏移量（阴影和镂空会造成这种偏移量）-->
+			<itemFrameImg offsetX="-113" offsetY="-113"/>
+			<!--道具图片的大小和偏移位置-->
+			<itemImg width="32" height="32"/>
+			<!--紫色卡牌正面背景动画图片的大小和偏移位置-->
+			<purpleImg offsetX="-24" offsetY="-13"/>
+			<!--金卡卡牌正面背景动画图片的大小和偏移位置-->
+			<goldCardImg offsetX="-214" offsetY="-195"/>
+		</geomInfos>
+		<!--各种特效动画-->
+		<effectImgs>
+			<!--刷新到特殊道具的特效动画-->
+			<effectImg name="flushItemEffect" x="235" y="142" loop="true" pack="data\interfaces.gl" group="256" frame="61"/>
+			<!--三张同色卡牌特效-->
+			<effectImg name="awardSameColorEffect" x="150" y="67" loop="false" pack="data\interfaces.gl" group="256" frame="59"/>
+			<!--进度条满的特效状态-->
+			<effectImg name="fullConsumeEffect" x="77" y="125" loop="false" pack="data\interfaces.gl" group="256" frame="62" next="fullConsumeEffectLoop"/>
+			<!--进度条满的特效状态(循环)-->
+			<effectImg name="fullConsumeEffectLoop" x="77" y="125" loop="true" pack="data\interfaces.gl" group="256" frame="65" next="fullConsumeEffectEnd"/>
+			<!--进度条满的特效状态(循环结束)-->
+			<effectImg name="fullConsumeEffectEnd" x="77" y="125" loop="true" pack="data\interfaces.gl" group="256" frame="74"/>
+			<!--一局游戏结束的提示特效-->
+			<effectImg name="gameOverEffect" x="247" y="164" loop="false" pack="data\interfaces.gl" group="256" frame="58" next="gameOverEffectLoop"/>
+			<!--一局游戏结束的提示特效(循环)-->
+			<effectImg name="gameOverEffectLoop" x="247" y="164" loop="true" pack="data\interfaces.gl" group="256" frame="64"/>
+			<!--进入紫金龙宫模式-->
+			<effectImg name="enterPurpleMode" x="331" y="262" loop="false" pack="data\interfaces.gl" group="256" frame="60"/>
+			<!--黄金龙宫进度条满的特效状态-->
+			<effectImg name="fullConsumeEffectGold" x="116" y="170" loop="false" pack="data\interfaces.gl" group="256" frame="162" next="fullConsumeEffectLoopGold"/>
+			<!--黄金龙宫进度条满的特效状态(循环)-->
+			<effectImg name="fullConsumeEffectLoopGold" x="116" y="170" loop="true" pack="data\interfaces.gl" group="256" frame="163" next="fullConsumeEffectEndGold"/>
+			<!--黄金龙宫进度条满的特效状态(循环结束)-->
+			<effectImg name="fullConsumeEffectEndGold" x="116" y="170" loop="true" pack="data\interfaces.gl" group="256" frame="163"/>
+			<!--进入黄金龙宫模式-->
+			<effectImg name="enterGoldMode" x="331" y="262" loop="false" pack="data\interfaces.gl" group="256" frame="164"/>
+			<!--进入白金龙宫模式-->
+			<effectImg name="enterBaiJinMode" x="331" y="262" loop="false" pack="data\interfaces2.gl" group="217" frame="333"/>
+			<!--进度条满的特效状态-->
+			<effectImg name="fullConsumeEffectBaiJin" x="65" y="139" loop="false" pack="data\interfaces2.gl" group="217" frame="334" next="fullConsumeEffectLoopBaiJin"/>
+			<!--进度条满的特效状态(循环)-->
+			<effectImg name="fullConsumeEffectLoopBaiJin" x="65" y="139" loop="true" pack="data\interfaces2.gl" group="217" frame="335" next="fullConsumeEffectEndBaiJin"/>
+			<!--进度条满的特效状态(循环结束)-->
+			<effectImg name="fullConsumeEffectEndBaiJin" x="65" y="139" loop="true" pack="data\interfaces2.gl" group="217" frame="336"/>
+		</effectImgs>
+	</cardImgs>
+	<!--自动卡牌配置-->
+	<robotConfig>
+		<!--自动刷新配置-->
+		<configs id="0">
+			<!--道具配置-->
+			<!--白色卡牌部分-->
+			<!--蓝色卡牌部分-->
+			<!--黄色卡牌部分-->
+			<!--绿色卡牌部分-->
+			<!--紫色卡牌部分-->
+			<itemConfig id="44" itemIds="2887" num="1" name="材料锦囊包"/>
+			<itemConfig id="45" itemIds="2898,2899" num="1" name="无暇锦囊包"/>
+			<itemConfig id="53" itemIds="3604" num="1" name="神器残片-弓"/>
+			<itemConfig id="54" itemIds="3605" num="1" name="神器残片-杖"/>
+			<itemConfig id="55" itemIds="3606" num="1" name="神器残片-剑"/>
+			<itemConfig id="56" itemIds="3607" num="1" name="神器残片-刃"/>
+			<itemConfig id="57" itemIds="3608" num="1" name="神器残片-扇"/>
+			<itemConfig id="58" itemIds="3609" num="1" name="神器残片-棍"/>
+			<itemConfig id="59" itemIds="3610" num="1" name="神器残片-刀"/>
+			<itemConfig id="70" itemIds="500225" num="1" name="神器残片-枪"/>
+			<itemConfig id="78" itemIds="9912" num="1" name="10资质5技能幻影"/>
+			<itemConfig id="80" itemIds="5307" num="15" name="神龙之露x15"/>
+			<itemConfig id="81" itemIds="3055" num="1" name="超级材料礼包"/>
+			<itemConfig id="82" itemIds="3056" num="1" name="超级无暇礼包"/>
+			<itemConfig id="83" itemIds="2360" num="1" name="两千元礼包"/>
+			<itemConfig id="84" itemIds="2362" num="1" name="伍千礼包"/>
+			<itemConfig id="85" itemIds="655687" num="1" name="六星龙珠"/>
+			<itemConfig id="86" itemIds="2888" num="1" name="材料小礼包"/>
+			<itemConfig id="87" itemIds="655811" num="1" name="神龙之露大礼包"/>
+			<itemConfig id="93" itemIds="656047" num="1" name="元气丹大礼包"/>
+			<itemConfig id="106" itemIds="656647" num="1" name="完美紫朱雀顶级技能卡片"/>
+			<itemConfig id="108" itemIds="658693" num="2" name="麒麟冰片x2"/>
+			<itemConfig id="109" itemIds="658694" num="5" name="麒麟犄角x5"/>
+			<itemConfig id="110" itemIds="658633" num="3" name="御马令（未鉴定）x3"/>
+			<itemConfig id="111" itemIds="658635" num="20" name="御马丹x20"/>
+			<itemConfig id="112" itemIds="659216" num="1" name="帝王源石"/>
+			<itemConfig id="119" itemIds="658693" num="10" name="麒麟冰片x10"/>
+			<itemConfig id="120" itemIds="658693" num="50" name="麒麟冰片x50"/>
+			<itemConfig id="121" itemIds="658694" num="10" name="麒麟犄角x10"/>
+			<itemConfig id="122" itemIds="658694" num="40" name="麒麟犄角x40"/>
+			<itemConfig id="123" itemIds="659216" num="2" name="帝王源石x2"/>
+			<itemConfig id="124" itemIds="662125" num="2" name="指定任务宝典x2"/>
+			<itemConfig id="128" itemIds="659215" num="3" name="麒麟之魂碎片x3"/>
+			<itemConfig id="129" itemIds="659188" num="10" name="龙纹x10"/>
+			<itemConfig id="130" itemIds="659188" num="30" name="龙纹x30"/>
+			<itemConfig id="140" itemIds="659474" num="5" name="魂引石x5"/>
+			<itemConfig id="141" itemIds="659809" num="2" name="黑曜石x2"/>
+			<itemConfig id="142" itemIds="660107" num="5" name="霸源（绿）x5"/>
+			<itemConfig id="143" itemIds="660109" num="3" name="霸灵x3"/>
+			<itemConfig id="144" itemIds="662126" num="2" name="指定名人传4-10x2"/>
+			<itemConfig id="145" itemIds="662127" num="2" name="指定名人传1-3x2"/>
+			<itemConfig id="154" itemIds="661890" num="5" name="铸兵石x5"/>
+			<itemConfig id="155" itemIds="659893" num="6" name="超级炼兵谱x6"/>
+			<itemConfig id="156" itemIds="659893" num="3" name="超级炼兵谱x3"/>
+			<itemConfig id="157" itemIds="660108" num="10" name="霸源（紫）x10"/>
+			<itemConfig id="158" itemIds="660109" num="8" name="霸灵x8"/>
+			<itemConfig id="159" itemIds="655367" num="1" name="升星石(13星)"/>
+			<itemConfig id="160" itemIds="661883" num="2" name="魂魄源石x2"/>
+			<itemConfig id="161" itemIds="661883" num="8" name="魂魄源石x8"/>
+			<itemConfig id="162" itemIds="661810" num="8" name="风雷精华x8"/>
+			<itemConfig id="163" itemIds="661810" num="15" name="风雷精华x15"/>
+			<itemConfig id="164" itemIds="661810" num="45" name="风雷精华x45"/>
+			<itemConfig id="165" itemIds="659871" num="5" name="玉髓液x5"/>
+			<itemConfig id="166" itemIds="662128" num="3" name="坐骑进阶券x3"/>
+			<itemConfig id="167" itemIds="661810" num="25" name="风雷精华x25"/>
+			<itemConfig id="168" itemIds="661810" num="50" name="风雷精华x50"/>
+			<itemConfig id="169" itemIds="661890" num="30" name="铸兵石x30"/>
+			<itemConfig id="170" itemIds="659809" num="3" name="黑曜石x3"/>
+			<itemConfig id="171" itemIds="659809" num="8" name="黑曜石x8"/>
+			<itemConfig id="172" itemIds="661883" num="8" name="魂魄源石x8"/>
+			<itemConfig id="173" itemIds="662128" num="8" name="坐骑进阶券x8"/>
+			<itemConfig id="174" itemIds="662128" num="15" name="坐骑进阶券x15"/>
+			<itemConfig id="175" itemIds="655367" num="1" name="13星升星石"/>
+			<itemConfig id="176" itemIds="660107" num="20" name="霸源(绿）x20"/>
+			<itemConfig id="177" itemIds="660108" num="15" name="霸源(紫）x15"/>
+			<!--itemConfig id="178" itemIds="659809" num="3" name="黑曜石x3"/-->
+			<itemConfig id="179" itemIds="661092" num="10" name="龙星升级宝石x10"/>
+			<itemConfig id="180" itemIds="661092" num="30" name="龙星升级宝石x30"/>
+			<itemConfig id="181" itemIds="659315" num="40" name="中型完美经验卡x40"/>
+			<itemConfig id="182" itemIds="659316" num="10" name="大型完美经验卡x10"/>
+			<itemConfig id="183" itemIds="659871" num="50" name="玉髓液x50"/>
+			<itemConfig id="184" itemIds="3888" num="2" name="万元礼包x2"/>
+			<itemConfig id="185" itemIds="659893" num="5" name="超级炼兵谱x5"/>
+			<itemConfig id="186" itemIds="659629" num="50" name="灵魂碎片x50"/>
+			<itemConfig id="187" itemIds="659630" num="1" name="灵魂刻刀"/>
+			<itemConfig id="188" itemIds="659216" num="5" name="帝王源石x5"/>
+			<itemConfig id="189" itemIds="662538" num="1" name="任选武器残片"/>
+			<itemConfig id="193" itemIds="662542" num="1" name="风雷精华袋"/>
+			<itemConfig id="194" itemIds="662543" num="1" name="铸兵石袋"/>
+			<itemConfig id="195" itemIds="662544" num="1" name="龙星宝石宝袋"/>
+			<itemConfig id="196" itemIds="662545" num="1" name="灵魂碎片袋"/>
+			<itemConfig id="197" itemIds="662998" num="1" name="龙星升星石(8星)"/>
+			<!--itemConfig id="198" itemIds="662515" num="8" name="征途传-东皇钟x8"/>
+			<itemConfig id="199" itemIds="662516" num="8" name="征途传-伏羲琴x8"/>
+			<itemConfig id="200" itemIds="662517" num="8" name="征途传-崆峒印x8"/>
+			<itemConfig id="201" itemIds="662518" num="8" name="征途传-炼妖壶x8"/>
+			<itemConfig id="202" itemIds="662519" num="4" name="征途传-玲珑塔x4"/>
+			<itemConfig id="203" itemIds="662520" num="8" name="征途传-女娲石x8"/>
+			<itemConfig id="204" itemIds="662521" num="4" name="征途传-盘古斧x4"/>
+			<itemConfig id="205" itemIds="662522" num="8" name="征途传-神农鼎x8"/>
+			<itemConfig id="206" itemIds="662523" num="4" name="征途传-天机镜x4"/>
+			<itemConfig id="207" itemIds="662524" num="4" name="征途传-轩辕剑x4"/-->
+			<itemConfig id="208" itemIds="663541" num="8" name="礼包坐骑进阶券x8"/>
+			<itemConfig id="209" itemIds="663541" num="15" name="礼包坐骑进阶券x15"/>
+			<itemConfig id="210" itemIds="663421" num="5" name="上古纹石x5"/>
+			<itemConfig id="211" itemIds="663422" num="5" name="西游纹石x5"/>
+			<itemConfig id="212" itemIds="663423" num="5" name="神兵纹石x5"/>
+			<itemConfig id="213" itemIds="663421" num="30" name="上古纹石x30"/>
+			<itemConfig id="214" itemIds="663422" num="30" name="西游纹石x30"/>
+			<itemConfig id="215" itemIds="663423" num="30" name="神兵纹石x30"/>
+			<itemConfig id="216" itemIds="663533" num="5" name="指定征途传-上古神器x5"/>
+			<itemConfig id="217" itemIds="663533" num="30" name="指定征途传-上古神器x30"/>
+			<itemConfig id="218" itemIds="662120" num="1" name="神器残片-护腕"/>
+			<itemConfig id="219" itemIds="662121" num="1" name="神器残片-战靴"/>
+			<itemConfig id="220" itemIds="662122" num="1" name="神器残片-头盔"/>
+			<itemConfig id="221" itemIds="662123" num="1" name="神器残片-腰带"/>
+			<itemConfig id="222" itemIds="662124" num="1" name="神器残片-副手"/>
+			<itemConfig id="223" itemIds="662560" num="10" name="炫彩石x10"/>
+			<itemConfig id="224" itemIds="662560" num="20" name="炫彩石x20"/>
+			<itemConfig id="225" itemIds="662560" num="100" name="炫彩石x100"/>
+
+			<!--人物装备配置-->
+			<equipConfig equipType="0" itemIds="" itemTypes="101,102,103,104,106,108,109,110,111,112,113,114,115,116,117,118,136,137"/>
+			<!--马匹装备配置-->
+			<equipConfig equipType="1" itemIds="" itemTypes="130,131,132,133,134"/>
+			<PurpleSetting>
+				<item id="10000" starType="8" name="8星神圣祝福装备"/>
+				<item id="10001" starType="10" name="10星神圣祝福装备"/>
+				<item id="10002" starType="12" name="12星神圣祝福装备"/>
+				<item id="10003" starType="13" name="13星神圣祝福装备"/>
+			</PurpleSetting>
+		</configs>
+		<!--自动提取配置-->
+		<configs id="1">
+			<!--道具配置-->
+			<itemConfig id="49" color="1" name="三张白色卡牌"/>
+			<itemConfig id="50" color="2" name="三张蓝色卡牌"/>
+			<!--道具配置-->
+			<!--白色卡牌部分-->
+			<!--蓝色卡牌部分-->
+			<!--黄色卡牌部分-->
+			<!--绿色卡牌部分-->
+			<!--紫色卡牌部分-->
+			<itemConfig id="44" itemIds="2887" num="1" name="材料锦囊包"/>
+			<itemConfig id="45" itemIds="2898,2899" num="1" name="无暇锦囊包"/>
+			<itemConfig id="53" itemIds="3604" num="1" name="神器残片-弓"/>
+			<itemConfig id="54" itemIds="3605" num="1" name="神器残片-杖"/>
+			<itemConfig id="55" itemIds="3606" num="1" name="神器残片-剑"/>
+			<itemConfig id="56" itemIds="3607" num="1" name="神器残片-刃"/>
+			<itemConfig id="57" itemIds="3608" num="1" name="神器残片-扇"/>
+			<itemConfig id="58" itemIds="3609" num="1" name="神器残片-棍"/>
+			<itemConfig id="59" itemIds="3610" num="1" name="神器残片-刀"/>
+			<itemConfig id="70" itemIds="500225" num="1" name="神器残片-枪"/>
+			<itemConfig id="78" itemIds="9912" num="1" name="10资质5技能幻影"/>
+			<itemConfig id="80" itemIds="5307" num="15" name="神龙之露x15"/>
+			<itemConfig id="81" itemIds="3055" num="1" name="超级材料礼包"/>
+			<itemConfig id="82" itemIds="3056" num="1" name="超级无暇礼包"/>
+			<itemConfig id="83" itemIds="2360" num="1" name="两千元礼包"/>
+			<itemConfig id="84" itemIds="2362" num="1" name="伍千礼包"/>
+			<itemConfig id="85" itemIds="655687" num="1" name="六星龙珠"/>
+			<itemConfig id="86" itemIds="2888" num="1" name="材料小礼包"/>
+			<itemConfig id="87" itemIds="655811" num="1" name="神龙之露大礼包"/>
+			<itemConfig id="93" itemIds="656047" num="1" name="元气丹大礼包"/>
+			<itemConfig id="106" itemIds="656647" num="1" name="完美紫朱雀顶级技能卡片"/>
+			<itemConfig id="108" itemIds="658693" num="2" name="麒麟冰片x2"/>
+			<itemConfig id="109" itemIds="658694" num="5" name="麒麟犄角x5"/>
+			<itemConfig id="110" itemIds="658633" num="3" name="御马令（未鉴定）x3"/>
+			<itemConfig id="111" itemIds="658635" num="20" name="御马丹x20"/>
+			<itemConfig id="112" itemIds="659216" num="1" name="帝王源石"/>
+			<itemConfig id="119" itemIds="658693" num="10" name="麒麟冰片x10"/>
+			<itemConfig id="120" itemIds="658693" num="50" name="麒麟冰片x50"/>
+			<itemConfig id="121" itemIds="658694" num="10" name="麒麟犄角x10"/>
+			<itemConfig id="122" itemIds="658694" num="40" name="麒麟犄角x40"/>
+			<itemConfig id="123" itemIds="659216" num="2" name="帝王源石x2"/>
+			<itemConfig id="124" itemIds="662125" num="2" name="指定任务宝典x2"/>
+			<itemConfig id="128" itemIds="659215" num="3" name="麒麟之魂碎片x3"/>
+			<itemConfig id="129" itemIds="659188" num="10" name="龙纹x10"/>
+			<itemConfig id="130" itemIds="659188" num="30" name="龙纹x30"/>
+			<itemConfig id="140" itemIds="659474" num="5" name="魂引石x5"/>
+			<itemConfig id="141" itemIds="659809" num="2" name="黑曜石x2"/>
+			<itemConfig id="142" itemIds="660107" num="5" name="霸源（绿）x5"/>
+			<itemConfig id="143" itemIds="660109" num="3" name="霸灵x3"/>
+			<itemConfig id="144" itemIds="662126" num="2" name="指定名人传4-10x2"/>
+			<itemConfig id="145" itemIds="662127" num="2" name="指定名人传1-3x2"/>
+			<itemConfig id="154" itemIds="661890" num="5" name="铸兵石x5"/>
+			<itemConfig id="155" itemIds="659893" num="6" name="超级炼兵谱x6"/>
+			<itemConfig id="156" itemIds="659893" num="3" name="超级炼兵谱x3"/>
+			<itemConfig id="157" itemIds="660108" num="10" name="霸源（紫）x10"/>
+			<itemConfig id="158" itemIds="660109" num="8" name="霸灵x8"/>
+			<itemConfig id="159" itemIds="655367" num="1" name="升星石(13星)"/>
+			<itemConfig id="160" itemIds="661883" num="2" name="魂魄源石x2"/>
+			<itemConfig id="161" itemIds="661883" num="8" name="魂魄源石x8"/>
+			<itemConfig id="162" itemIds="661810" num="8" name="风雷精华x8"/>
+			<itemConfig id="163" itemIds="661810" num="15" name="风雷精华x15"/>
+			<itemConfig id="164" itemIds="661810" num="45" name="风雷精华x45"/>
+			<itemConfig id="165" itemIds="659871" num="5" name="玉髓液x5"/>
+			<itemConfig id="166" itemIds="662128" num="3" name="坐骑进阶券x3"/>
+			<itemConfig id="167" itemIds="661810" num="25" name="风雷精华x25"/>
+			<itemConfig id="168" itemIds="661810" num="50" name="风雷精华x50"/>
+			<itemConfig id="169" itemIds="661890" num="30" name="铸兵石x30"/>
+			<itemConfig id="170" itemIds="659809" num="3" name="黑曜石x3"/>
+			<itemConfig id="171" itemIds="659809" num="8" name="黑曜石x8"/>
+			<itemConfig id="172" itemIds="661883" num="8" name="魂魄源石x8"/>
+			<itemConfig id="173" itemIds="662128" num="8" name="坐骑进阶券x8"/>
+			<itemConfig id="174" itemIds="662128" num="15" name="坐骑进阶券x15"/>
+			<itemConfig id="175" itemIds="655367" num="1" name="13星升星石"/>
+			<itemConfig id="176" itemIds="660107" num="20" name="霸源(绿）x20"/>
+			<itemConfig id="177" itemIds="660108" num="15" name="霸源(紫）x15"/>
+			<!--itemConfig id="178" itemIds="659809" num="3" name="黑曜石x3"/-->
+			<itemConfig id="179" itemIds="661092" num="10" name="龙星升级宝石x10"/>
+			<itemConfig id="180" itemIds="661092" num="30" name="龙星升级宝石x30"/>
+			<itemConfig id="181" itemIds="659315" num="40" name="中型完美经验卡x40"/>
+			<itemConfig id="182" itemIds="659316" num="10" name="大型完美经验卡x10"/>
+			<itemConfig id="183" itemIds="659871" num="50" name="玉髓液x50"/>
+			<itemConfig id="184" itemIds="3888" num="2" name="万元礼包x2"/>
+			<itemConfig id="185" itemIds="659893" num="5" name="超级炼兵谱x5"/>
+			<itemConfig id="186" itemIds="659629" num="50" name="灵魂碎片x50"/>
+			<itemConfig id="187" itemIds="659630" num="1" name="灵魂刻刀"/>
+			<itemConfig id="188" itemIds="659216" num="5" name="帝王源石x5"/>
+			<itemConfig id="189" itemIds="662538" num="1" name="任选武器残片"/>
+			<itemConfig id="193" itemIds="662542" num="1" name="风雷精华袋"/>
+			<itemConfig id="194" itemIds="662543" num="1" name="铸兵石袋"/>
+			<itemConfig id="195" itemIds="662544" num="1" name="龙星宝石宝袋"/>
+			<itemConfig id="196" itemIds="662545" num="1" name="灵魂碎片袋"/>
+			<itemConfig id="197" itemIds="662998" num="1" name="龙星升星石(8星)"/>
+			<!--itemConfig id="198" itemIds="662515" num="8" name="征途传-东皇钟x8"/>
+			<itemConfig id="199" itemIds="662516" num="8" name="征途传-伏羲琴x8"/>
+			<itemConfig id="200" itemIds="662517" num="8" name="征途传-崆峒印x8"/>
+			<itemConfig id="201" itemIds="662518" num="8" name="征途传-炼妖壶x8"/>
+			<itemConfig id="202" itemIds="662519" num="4" name="征途传-玲珑塔x4"/>
+			<itemConfig id="203" itemIds="662520" num="8" name="征途传-女娲石x8"/>
+			<itemConfig id="204" itemIds="662521" num="4" name="征途传-盘古斧x4"/>
+			<itemConfig id="205" itemIds="662522" num="8" name="征途传-神农鼎x8"/>
+			<itemConfig id="206" itemIds="662523" num="4" name="征途传-天机镜x4"/>
+			<itemConfig id="207" itemIds="662524" num="4" name="征途传-轩辕剑x4"/-->
+			<itemConfig id="208" itemIds="663541" num="8" name="礼包坐骑进阶券x8"/>
+			<itemConfig id="209" itemIds="663541" num="15" name="礼包坐骑进阶券x15"/>
+			<itemConfig id="210" itemIds="663421" num="5" name="上古纹石x5"/>
+			<itemConfig id="211" itemIds="663422" num="5" name="西游纹石x5"/>
+			<itemConfig id="212" itemIds="663423" num="5" name="神兵纹石x5"/>
+			<itemConfig id="213" itemIds="663421" num="30" name="上古纹石x30"/>
+			<itemConfig id="214" itemIds="663422" num="30" name="西游纹石x30"/>
+			<itemConfig id="215" itemIds="663423" num="30" name="神兵纹石x30"/>
+			<itemConfig id="216" itemIds="663533" num="5" name="指定征途传-上古神器x5"/>
+			<itemConfig id="217" itemIds="663533" num="30" name="指定征途传-上古神器x30"/>
+			<itemConfig id="218" itemIds="662120" num="1" name="神器残片-护腕"/>
+			<itemConfig id="219" itemIds="662121" num="1" name="神器残片-战靴"/>
+			<itemConfig id="220" itemIds="662122" num="1" name="神器残片-头盔"/>
+			<itemConfig id="221" itemIds="662123" num="1" name="神器残片-腰带"/>
+			<itemConfig id="222" itemIds="662124" num="1" name="神器残片-副手"/>
+			<itemConfig id="223" itemIds="662560" num="10" name="炫彩石x10"/>
+			<itemConfig id="224" itemIds="662560" num="20" name="炫彩石x20"/>
+			<itemConfig id="225" itemIds="662560" num="100" name="炫彩石x100"/>
+			<!--人物装备配置-->
+			<equipConfig equipType="0" itemIds="" itemTypes="101,102,103,104,106,108,109,110,111,112,113,114,115,116,117,118,136,137"/>
+			<!--马匹装备配置-->
+			<equipConfig equipType="1" itemIds="" itemTypes="130,131,132,133,134"/>
+			<PurpleSetting>
+				<item id="10000" starType="8" name="8星神圣祝福装备"/>
+				<item id="10001" starType="10" name="10星神圣祝福装备"/>
+				<item id="10002" starType="12" name="12星神圣祝福装备"/>
+				<item id="10003" starType="13" name="13星神圣祝福装备"/>
+			</PurpleSetting>
+		</configs>
+		<!--自动贩卖配置-->
+		<configs id="2">
+			<!--道具配置-->
+			<!--白色卡牌部分-->
+			<itemConfig id="1" itemIds="2442" num="1" name="五两工资包"/>
+			<itemConfig id="2" itemIds="968" num="1" name="玉符"/>
+			<itemConfig id="3" itemIds="1100" num="5" name="鲜花x5"/>
+			<itemConfig id="4" itemIds="3572" num="1" name="小喇叭"/>
+			<itemConfig id="5" itemIds="969" num="5" name="御赐金符x5"/>
+			<itemConfig id="6" itemIds="2922" num="1" name="初级任务丹"/>
+			<itemConfig id="7" itemIds="2795" num="2" name="百仙果x2"/>
+			<itemConfig id="8" itemIds="2907" num="1" name="材料袋"/>
+			<itemConfig id="9" itemIds="2443" num="1" name="十两工资包"/>
+			<!--蓝色卡牌部分-->
+			<itemConfig id="10" itemIds="2364" num="1" name="二十两工资包"/>
+			<itemConfig id="11" itemIds="1100" num="100" name="鲜花x100"/>
+			<itemConfig id="12" itemIds="1452" num="1" name="神之魔力"/>
+			<itemConfig id="13" itemIds="2923" num="1" name="中级任务丹"/>
+			<itemConfig id="14" itemIds="1083" num="1" name="紫金龙舟浆"/>
+			<itemConfig id="15" itemIds="1583" num="1" name="紫镖令"/>
+			<itemConfig id="16" itemIds="1080" num="1" name="国家任务令"/>
+			<itemConfig id="17" itemIds="2312" num="1" name="战旗祝福石"/>
+			<itemConfig id="18" itemIds="1317" num="1" name="祝福石"/>
+			<itemConfig id="19" itemTypes="205" num="1" name="补天石"/>
+			<!--黄色卡牌部分-->
+			<itemConfig id="20" itemIds="2365" num="1" name="一百元礼包"/>
+			<itemConfig id="21" itemIds="1100" num="200" name="鲜花x200"/>
+			<itemConfig id="22" itemIds="969" num="10" name="御赐金符x10"/>
+			<itemConfig id="23" itemIds="2492" num="10" name="华彩布料x10"/>
+			<itemConfig id="24" itemIds="2924" num="1" name="高级任务丹"/>
+			<itemConfig id="25" itemIds="550" num="1" name="定星石"/>
+			<itemConfig id="26" itemIds="1414" num="5" name="包裹修复石碎片x5"/>
+			<itemConfig id="27" itemIds="2489" num="1" name="玄麟精魄碎片"/>
+			<itemConfig id="28" itemTypes="204" num="1" name="补天灵石"/>
+			<!--绿色卡牌部分-->
+			<itemConfig id="29" itemIds="2492" num="100" name="华彩布料x100"/>
+			<itemConfig id="30" itemIds="3614" num="10" name="风雷羽x10"/>
+			<itemConfig id="31" itemIds="2367" num="1" name="四佰元礼包"/>
+			<itemConfig id="32" itemIds="1594" num="20" name="夜光珠x20"/>
+			<itemConfig id="33" itemIds="969" num="50" name="御赐金符x50"/>
+			<itemConfig id="34" itemIds="969" num="200" name="御赐金符x200"/>
+			<itemConfig id="35" itemIds="1100" num="600" name="鲜花x600"/>
+			<itemConfig id="36" itemIds="1552" num="1" name="乾坤袋"/>
+			<itemConfig id="37" itemTypes="203" num="1" name="补天神石"/>
+			<itemConfig id="44" itemIds="2991" num="10" name="灵化结晶x10"/>
+			<itemConfig id="45" itemIds="2991" num="60" name="灵化结晶x60"/>
+			<itemConfig id="62" itemIds="3838" num="1" name="白虎石"/>
+			<itemConfig id="63" itemIds="3839" num="1" name="青龙石"/>
+			<itemConfig id="64" itemIds="3840" num="1" name="玄武石"/>
+			<itemConfig id="65" itemIds="3841" num="1" name="朱雀石"/>
+			<itemConfig id="66" itemIds="3842" num="1" name="麒麟石"/>
+			<itemConfig id="68" itemIds="3614" num="2" name="风雷羽x2"/>
+			<!--紫色卡牌部分-->
+			<!--itemConfig id="38" itemIds="1578" num="500" name="材料卡x500"/-->
+			<itemConfig id="39" itemIds="799" num="100" name="无暇宝石x100"/>
+			<itemConfig id="40" itemIds="1298" num="1" name="玄麟精魄"/>
+			<itemConfig id="41" itemIds="1550" num="1" name="千手观音"/>
+			<itemConfig id="43" itemTypes="217" num="1" name="强化补天神石"/>
+			<itemConfig id="53" itemIds="3604" num="1" name="神器残片-弓"/>
+			<itemConfig id="54" itemIds="3605" num="1" name="神器残片-杖"/>
+			<itemConfig id="55" itemIds="3606" num="1" name="神器残片-剑"/>
+			<itemConfig id="56" itemIds="3607" num="1" name="神器残片-刃"/>
+			<itemConfig id="57" itemIds="3608" num="1" name="神器残片-扇"/>
+			<itemConfig id="58" itemIds="3609" num="1" name="神器残片-棍"/>
+			<itemConfig id="59" itemIds="3610" num="1" name="神器残片-刀"/>
+			<itemConfig id="67" itemIds="3923" num="10" name="圣灵石x10"/>
+			<itemConfig id="69" itemIds="3614" num="60" name="风雷羽x60"/>
+			<itemConfig id="70" itemIds="2991" num="2" name="灵化结晶x2"/>
+			<!--人物装备配置-->
+			<equipConfig equipType="0" itemIds="" itemTypes="101,102,103,104,106,108,109,110,111,112,113,114,115,116,117,118,136,137"/>
+			<!--马匹装备配置-->
+			<equipConfig equipType="1" itemIds="" itemTypes="130,131,132,133,134"/>
+			<PurpleSetting>
+				<item id="10000" starType="8" name="8星神圣祝福装备"/>
+				<item id="10001" starType="10" name="10星神圣祝福装备"/>
+				<item id="10002" starType="12" name="12星神圣祝福装备"/>
+				<item id="10003" starType="13" name="13星神圣祝福装备"/>
+			</PurpleSetting>
+		</configs>
+		<!--自动翻牌配置-->
+		<configs id="3">
+			<show preText="第" aftText="张"/>
+			<round normalCount="8" bigAwardCount="24" purpleCount="24"/>
+		</configs>
+		<!--默认配置-->
+		<configs id="4" text="200703;6 1 5 3 10 0;81 83 0;10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 114 115 116 117 118 119 120 121 122 123 124 128 129 130 131 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166;10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 114 115 116 117 118 119 120 121 122 123 124 128 129 130 131 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166;"/>
+	</robotConfig>
+	<alternates>
+		<!--卡牌的可变配置列表以id为基础-->
+		<alternate id="3526" name="欢乐卡牌">
+			<!--通用开关配置  0为关闭 1为开启 onlyBloodyBattle指是否直接血战模式 Huasuan指是否适用越开越划算 Discount2指是否适用惠民卡畅玩卡 BackReward指是否适用回退道具 -->
+			<DiscountSwitch onlybloodyBattle="0" Huasuan="0" Discount2="0" BackReward="0"/>
+			<!--双字按钮开关配置  0为关闭 1为开启-->
+			<DoubleBtnSwitch isOpen="0"/>
+			<doubleCheck desc="    使用15个紫金龙鳞或者8个月亮石，可使本局所有卡牌变成双倍金卡，抽中任何卡牌可获得双倍奖励！          注：双倍奖励模式和龙宫模式不能使用双倍金卡" checkItem1="8个月亮石" checkItem2="15个紫金龙鳞">
+			</doubleCheck>
+			<!-- 卡牌火焰文字的优先级显示 priority值越大 优先级越高 注意所有的qualityID 都要配置在这里面-->
+			<ItemPriority>
+				<item qualityID="8998" priority="11"/>
+				<item qualityID="7004" priority="10"/>
+				<item qualityID="7003" priority="9"/>
+				<item qualityID="3998" priority="8"/>
+				<item qualityID="7002" priority="7"/>
+				<item qualityID="7001" priority="6"/>
+				<item qualityID="4004" priority="5"/>
+				<item qualityID="7996" priority="4"/>
+				<item qualityID="7997" priority="3"/>
+				<item qualityID="4001" priority="2"/>
+				<item qualityID="7999" priority="1"/>
+			</ItemPriority>
+			<!--注意名字不能超过17个字!!!!!!-->
+			<goldNeeds maxRound="4">
+				<!-- 某一轮的配置：round，第几轮；gold，需要的金子数，文为单位; tips, 每轮开始前弹出的提示-->
+				<!--tips信息的格式 : 一对 % 里的数据表示对字体颜色等的格式设置，总的如下
+				 %%：表示显示%字符本身；
+				 %c255 255 0 200%：表示以后的字的颜色都为紫色
+				 %n%：换行
+				 %a 1%：对齐方式
+					Top_Left         5
+					Top_Middle       4
+					Top_Right        6
+					Middle_Left      1
+					Middle_Middle    0
+					Middle_Right     2
+					Bottom_Left      9
+					Bottom_Middle    8
+					Bottom_Right    10
+				 %w 28%: 一行文字的总的字符数（这个信息是为了对齐用的，可以不配置，程序会自动计算）
+				 %h 5%: 弹出的提示对话框总共显示几行信息（这个得和gui界面配合才行，可以不配置，程序会自动计算）
+				-->
+				<goldNeed round="1" gold="100" tips="%a0%%c255 250 150 50%开始第一轮欢乐卡牌游戏需%c255 85 255 155%使用1个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏共分四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.每抽选一张卡牌即可获得对应的道具。"/>
+				<goldNeed round="2" gold="200" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用2个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="3" gold="400" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用4个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="4" gold="800" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用8个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="5" gold="1500" tips="%a0%%c255 250 150 50%开始一局欢乐卡牌游戏需%c255 85 255 155%使用15个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏可玩四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.此模式下如果玩家对获得的道具不满意可回退道具。"/>
+				<!--回退道具的信息：maxRound +2-->
+				<goldNeed round="6" gold="0" tips="%a0%%c255 250 150 50%可回退道具给系统，系统返还5个紫金龙鳞。%n1%"/>
+			</goldNeeds>
+			<rightItemInfo>
+				<item id="3526" name="欢乐卡牌" quantifier="张"/>
+				<item id="3564" name="紫金龙鳞" quantifier="个"/>
+			</rightItemInfo>
+			<!--获得紫奖的最大消费金额-->
+			<consume processMax="60000"/>
+			<tips>
+				<tip id="0">%c255 85 255 155%你确定要退出欢乐卡牌游戏？</tip>
+				<tip id="1">%c255 85 255 155%你确定要退出欢乐卡牌游戏？%n%血战模式下中途退出卡牌游戏会失去当前赢得的奖励</tip>
+				<tip id="2">%c255 85 255 155%本次卡牌游戏还未结束！</tip>
+				<tip id="3">%c255 85 255 155%卡牌游戏的大奖还未抽取完！</tip>
+			</tips>
+			<!--双倍卡-->
+			<doubleItem id="3901"/>
+			<!-- 欢乐卡牌 新年版 之 关于每一局的文字提示-->
+			<tipsFestival round="1, 5, 15, 70"/>
+			<NewYearTime startTime="2010-04-20 00:00:00" endTime="2020-12-12 23:59:58"/>
+			<!--回退道具-->
+			<BackReward>
+				<p>
+					<n color="255,250,150,50">可回退道具给系统，系统返还</n>
+					<object id="3564" textcolor="255,0,255,0" HideBkImg="true"/>
+					<n color="255,250,150,50">x10或</n>
+					<object id="657863" textcolor="255,0,255,0" HideBkImg="true"/>
+					<n color="255,250,150,50">x1</n>
+				</p>
+			</BackReward>
+		</alternate>
+		<alternate id="3655" name="节日卡牌">
+			<!--通用开关配置  0为关闭 1为开启 onlyBloodyBattle指是否直接血战模式 Huasuan指是否适用越开越划算 Discount2指是否适用惠民卡畅玩卡 BackReward指是否适用回退道具 -->
+			<DiscountSwitch onlybloodyBattle="0" Huasuan="1" Discount2="1" BackReward="1"/>
+			<!--双字按钮开关配置  0为关闭 1为开启-->
+			<DoubleBtnSwitch isOpen="1"/>
+			<doubleCheck desc="    使用30个紫金龙鳞或者16个月亮石，可使本局所有卡牌变成双倍金卡，抽中任何卡牌可获得双倍奖励！          注：双倍奖励模式和龙宫模式不能使用双倍金卡" checkItem1="16个月亮石" checkItem2="30个紫金龙鳞">
+			</doubleCheck>
+			<!-- 卡牌火焰文字的优先级显示 priority值越大 优先级越高 注意所有的qualityID 都要配置在这里面-->
+			<ItemPriority>
+				<item qualityID="21118" priority="69"/>
+				<item qualityID="21120" priority="68"/>
+				<item qualityID="21114" priority="67"/>
+				<item qualityID="18999" priority="66"/>
+				<item qualityID="18998" priority="65"/>
+				<item qualityID="13999" priority="64"/>
+				<item qualityID="13992" priority="63"/>
+				<item qualityID="13993" priority="62"/>
+				<item qualityID="13995" priority="61"/>
+				<item qualityID="13998" priority="60"/>
+				<item qualityID="13996" priority="59"/>
+				<item qualityID="13994" priority="58"/>
+				<item qualityID="13997" priority="57"/>
+				<item qualityID="17004" priority="56"/>
+				<item qualityID="21112" priority="55"/>
+				<item qualityID="11100" priority="54"/>
+				<item qualityID="18997" priority="53"/>
+				<item qualityID="18996" priority="52"/>
+				<item qualityID="21122" priority="51"/>
+				<item qualityID="21134" priority="50"/>
+				<item qualityID="14008" priority="49"/>
+				<item qualityID="18994" priority="48"/>
+				<item qualityID="21133" priority="47"/>
+				<item qualityID="21131" priority="46"/>
+				<item qualityID="17996" priority="45"/>
+				<item qualityID="21130" priority="44"/>
+				<item qualityID="21129" priority="43"/>
+				<item qualityID="21132" priority="42"/>
+				<item qualityID="21116" priority="41"/>
+				<item qualityID="21124" priority="40"/>
+				<item qualityID="17802" priority="39"/>
+				<item qualityID="17800" priority="38"/>
+				<item qualityID="21111" priority="37"/>
+				<item qualityID="17003" priority="36"/>
+				<item qualityID="14007" priority="35"/>
+				<item qualityID="21125" priority="34"/>
+				<item qualityID="21123" priority="33"/>
+				<item qualityID="21117" priority="32"/>
+				<item qualityID="21128" priority="31"/>
+				<item qualityID="21135" priority="30"/>
+				<item qualityID="21126" priority="30"/>
+				<item qualityID="17994" priority="29"/>
+				<item qualityID="17801" priority="28"/>
+				<item qualityID="1100" priority="27"/>
+				<item qualityID="17002" priority="26"/>
+				<item qualityID="17001" priority="25"/>
+				<item qualityID="239993" priority="24"/>
+				<item qualityID="21115" priority="23"/>
+				<item qualityID="17995" priority="22"/>
+				<item qualityID="239998" priority="21"/>
+				<item qualityID="21121" priority="20"/>
+				<item qualityID="14001" priority="19"/>
+				<item qualityID="239991" priority="18"/>
+				<item qualityID="239994" priority="17"/>
+				<item qualityID="14004" priority="16"/>
+				<item qualityID="239988" priority="15"/>
+				<item qualityID="17998" priority="14"/>
+				<item qualityID="239996" priority="13"/>
+				<item qualityID="14006" priority="12"/>
+				<item qualityID="239987" priority="11"/>
+				<item qualityID="18995" priority="10"/>
+				<item qualityID="239992" priority="9"/>
+				<item qualityID="17997" priority="8"/>
+				<item qualityID="239997" priority="7"/>
+				<item qualityID="14002" priority="6"/>
+				<item qualityID="239990" priority="5"/>
+				<item qualityID="14003" priority="4"/>
+				<item qualityID="239989" priority="3"/>
+				<item qualityID="17999" priority="2"/>
+				<item qualityID="239995" priority="1"/>
+			</ItemPriority>
+			<!--注意名字不能超过17个字!!!!!!-->
+			<goldNeeds maxRound="4">
+				<!-- 某一轮的配置：round，第几轮；gold，需要的金子数，文为单位; tips, 每轮开始前弹出的提示-->
+				<!--tips信息的格式 : 一对 % 里的数据表示对字体颜色等的格式设置，总的如下
+				 %%：表示显示%字符本身；
+				 %c255 255 0 200%：表示以后的字的颜色都为紫色
+				 %n%：换行
+				 %a 1%：对齐方式
+					Top_Left         5
+					Top_Middle       4
+					Top_Right        6
+					Middle_Left      1
+					Middle_Middle    0
+					Middle_Right     2
+					Bottom_Left      9
+					Bottom_Middle    8
+					Bottom_Right    10
+				 %w 28%: 一行文字的总的字符数（这个信息是为了对齐用的，可以不配置，程序会自动计算）
+				 %h 5%: 弹出的提示对话框总共显示几行信息（这个得和gui界面配合才行，可以不配置，程序会自动计算）
+				-->
+				<goldNeed round="1" gold="100" tips="%a0%%c255 250 150 50%开始第一轮节日欢乐卡牌游戏需%c255 85 255 155%使用2个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏共分四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.每抽选一张卡牌即可获得对应的道具。"/>
+				<goldNeed round="2" gold="200" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用4个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="3" gold="400" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用8个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="4" gold="800" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用16个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="5" gold="1500" tips="%a0%%c255 250 150 50%开始一局节日欢乐卡牌游戏需%c255 85 255 155%使用30个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏可玩四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.此模式下如果玩家对获得的道具不满意可回退道具。"/>
+				<!--回退道具的信息：maxRound +2-->
+				<goldNeed round="6" gold="0" tips="%a0%%c255 250 150 50%可回退道具给系统，系统返还10个紫金龙鳞。%n1%"/>
+				<goldNeed round="7" gold="1500" tips="%a0%%c255 250 150 50%开始一局节日欢乐卡牌游戏需使用30个紫金龙鳞,是否继续?%n2%%a1%  说明:%c255 255 255 255%1.越开越划算活动,节日卡牌最少只需要%c255 85 255 155%20个紫金龙鳞%n%       %c255 255 255 255%2.11局以上需要%c255 85 255 155%25个龙鳞,%c255 255 255 255%51局以上只需要%c255 85 255 155%20个龙鳞"/>
+			</goldNeeds>
+			<rightItemInfo>
+				<item id="3655" name="节日卡牌" quantifier="张"/>
+				<item id="3564" name="紫金龙鳞" quantifier="个"/>
+			</rightItemInfo>
+			<!--获得紫奖的最大消费金额-->
+			<consume processMax="60000"/>
+			<tips>
+				<tip id="0">%c255 85 255 155%你确定要退出节日卡牌游戏？</tip>
+				<tip id="1">%c255 85 255 155%你确定要退出节日卡牌游戏？%n%血战模式下中途退出卡牌游戏会失去当前赢得的奖励</tip>
+				<tip id="2">%c255 85 255 155%本次卡牌游戏还未结束！</tip>
+				<tip id="3">%c255 85 255 155%卡牌游戏的大奖还未抽取完！</tip>
+			</tips>
+			<!--双倍卡-->
+			<doubleItem id="3901"/>
+			<!-- 节日卡牌 新年版 之 关于每一局的文字提示-->
+			<tipsFestival round="1, 5, 10,50"/>
+			<!-- 新年卡牌的时间配置-->
+			<NewYearTime startTime="2010-04-20 00:00:00" endTime="2021-12-12 23:59:58"/>
+			<!--前五局双倍活动时间配置-->
+			<DoubleInFirst5RoundTime startTime="2014-09-01 00:00:01" endTime="2014-09-30 23:59:58"/>
+			<!--回退道具-->
+			<BackReward>
+				<p>
+					<n color="255,250,150,50">可回退道具给系统，系统返还</n>
+					<object id="3564" textcolor="255,0,255,0" HideBkImg="true"/>
+					<n color="255,250,150,50">x10或</n>
+					<object id="657863" textcolor="255,0,255,0" HideBkImg="true"/>
+					<n color="255,250,150,50">x1</n>
+				</p>
+			</BackReward>
+		</alternate>
+		<alternate id="658713" name="黄金卡牌">
+			<!--通用开关配置  0为关闭 1为开启 onlyBloodyBattle指是否直接血战模式 Huasuan指是否适用越开越划算 Discount2指是否适用惠民卡畅玩卡 BackReward指是否适用回退道具 -->
+			<DiscountSwitch onlybloodyBattle="1" Huasuan="0" Discount2="0" BackReward="0"/>
+			<!--双字按钮开关配置  0为关闭 1为开启-->
+			<DoubleBtnSwitch isOpen="0"/>
+			<doubleCheck desc="    使用30个紫金龙鳞或者16个月亮石，可使本局所有卡牌变成双倍金卡，抽中任何卡牌可获得双倍奖励！          注：双倍奖励模式和龙宫模式不能使用双倍金卡" checkItem1="16个月亮石" checkItem2="30个紫金龙鳞">
+			</doubleCheck>
+			<!-- 卡牌火焰文字的优先级显示 priority值越大 优先级越高 注意所有的qualityID 都要配置在这里面-->
+			<ItemPriority>
+				<item qualityID="889300" priority="82"/>
+				<item qualityID="890950" priority="81"/>
+				<item qualityID="890850" priority="80"/>
+				<item qualityID="890550" priority="79"/>
+				<item qualityID="888170" priority="78"/>
+				<item qualityID="888630" priority="77"/>
+				<item qualityID="888650" priority="76"/>
+				<item qualityID="888100" priority="75"/>
+				<item qualityID="888110" priority="74"/>
+				<item qualityID="888160" priority="73"/>
+				<item qualityID="888140" priority="72"/>
+				<item qualityID="888130" priority="71"/>
+				<item qualityID="888120" priority="70"/>
+				<item qualityID="890750" priority="69"/>
+				<item qualityID="890450" priority="68"/>
+				<item qualityID="890350" priority="67"/>
+				<item qualityID="889990" priority="66"/>
+				<item qualityID="889912" priority="65"/>
+				<item qualityID="889902" priority="64"/>
+				<item qualityID="888150" priority="63"/>
+				<item qualityID="888930" priority="62"/>
+				<item qualityID="888840" priority="61"/>
+				<item qualityID="888920" priority="60"/>
+				<item qualityID="890710" priority="59"/>
+				<item qualityID="888020" priority="58"/>
+				<item qualityID="888830" priority="57"/>
+				<item qualityID="890400" priority="56"/>
+				<item qualityID="890910" priority="55"/>
+				<item qualityID="890200" priority="54"/>
+				<item qualityID="890800" priority="53"/>
+				<item qualityID="890900" priority="52"/>
+				<item qualityID="890700" priority="51"/>
+				<item qualityID="890400" priority="50"/>
+				<item qualityID="889980" priority="49"/>
+				<item qualityID="888640" priority="48"/>
+				<item qualityID="888720" priority="47"/>
+				<item qualityID="888620" priority="46"/>
+				<item qualityID="888210" priority="45"/>
+				<item qualityID="889120" priority="44"/>
+				<item qualityID="888610" priority="43"/>
+				<item qualityID="889500" priority="42"/>
+				<item qualityID="889941" priority="41"/>
+				<item qualityID="889960" priority="40"/>
+				<item qualityID="891000" priority="39"/>
+				<item qualityID="889970" priority="38"/>
+				<item qualityID="890600" priority="37"/>
+				<item qualityID="890300" priority="36"/>
+				<item qualityID="890100" priority="35"/>
+				<item qualityID="890500" priority="34"/>
+				<item qualityID="890300" priority="33"/>
+				<item qualityID="889230" priority="32"/>
+				<item qualityID="888600" priority="31"/>
+				<item qualityID="888710" priority="30"/>
+				<item qualityID="889260" priority="29"/>
+				<item qualityID="889250" priority="28"/>
+				<item qualityID="889400" priority="27"/>
+				<item qualityID="889800" priority="26"/>
+				<item qualityID="888820" priority="25"/>
+				<item qualityID="890000" priority="24"/>
+				<item qualityID="889911" priority="23"/>
+				<item qualityID="889940" priority="22"/>
+				<item qualityID="889920" priority="21"/>
+				<item qualityID="889901" priority="20"/>
+				<item qualityID="889910" priority="19"/>
+				<item qualityID="889700" priority="18"/>
+				<item qualityID="888400" priority="17"/>
+				<item qualityID="888700" priority="16"/>
+				<item qualityID="889220" priority="15"/>
+				<item qualityID="888910" priority="14"/>
+				<item qualityID="888810" priority="13"/>
+				<item qualityID="889110" priority="12"/>
+				<item qualityID="889210" priority="11"/>
+				<item qualityID="889930" priority="10"/>
+				<item qualityID="889900" priority="9"/>
+				<item qualityID="888900" priority="8"/>
+				<item qualityID="888500" priority="7"/>
+				<item qualityID="888300" priority="6"/>
+				<item qualityID="889600" priority="5"/>
+				<item qualityID="888800" priority="4"/>
+				<item qualityID="889200" priority="3"/>
+				<item qualityID="889100" priority="2"/>
+				<item qualityID="888200" priority="1"/>
+			</ItemPriority>
+			<!--注意名字不能超过17个字!!!!!!-->
+			<goldNeeds maxRound="4">
+				<!-- 某一轮的配置：round，第几轮；gold，需要的金子数，文为单位; tips, 每轮开始前弹出的提示-->
+				<!--tips信息的格式 : 一对 % 里的数据表示对字体颜色等的格式设置，总的如下
+				 %%：表示显示%字符本身；
+				 %c255 255 0 200%：表示以后的字的颜色都为紫色
+				 %n%：换行
+				 %a 1%：对齐方式
+					Top_Left         5
+					Top_Middle       4
+					Top_Right        6
+					Middle_Left      1
+					Middle_Middle    0
+					Middle_Right     2
+					Bottom_Left      9
+					Bottom_Middle    8
+					Bottom_Right    10
+				 %w 28%: 一行文字的总的字符数（这个信息是为了对齐用的，可以不配置，程序会自动计算）
+				 %h 5%: 弹出的提示对话框总共显示几行信息（这个得和gui界面配合才行，可以不配置，程序会自动计算）
+				-->
+				<goldNeed round="1" gold="400" tips="%a0%%c255 250 150 50%开始第一轮黄金卡牌游戏需%c255 85 255 155%使用8个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏共分四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.每抽选一张卡牌即可获得对应的道具。"/>
+				<goldNeed round="2" gold="800" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用16个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="3" gold="1600" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用32个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="4" gold="3200" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用64个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="5" gold="5000" tips="%a0%%c255 250 150 50%开始一局黄金卡牌游戏需%c255 85 255 155%使用100个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏可玩四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.此模式下如果玩家对获得的道具不满意可回退道具。"/>
+				<!--回退道具的信息：maxRound +2-->
+				<goldNeed round="6" gold="0" tips="%a0%%c255 250 150 50%可回退道具给系统，系统返还33个紫金龙鳞。%n1%"/>
+				<goldNeed round="7" gold="5000" tips="%a0%%c255 250 150 50%开始一局黄金卡牌游戏需使用100个紫金龙鳞,是否继续?%n2%%a1%  说明:%c255 255 255 255%1.越开越划算活动,节日卡牌最少只需要%c255 85 255 155%60个紫金龙鳞%n%       %c255 255 255 255%2.11局以上需要%c255 85 255 155%80个龙鳞,%c255 255 255 255%51局以上只需要%c255 85 255 155%60个龙鳞"/>
+			</goldNeeds>
+			<rightItemInfo>
+				<item id="658713" name="黄金卡牌" quantifier="张"/>
+				<item id="3564" name="紫金龙鳞" quantifier="个"/>
+			</rightItemInfo>
+			<!--获得紫奖的最大消费金额-->
+			<consume processMax="60000"/>
+			<tips>
+				<tip id="0">%c255 85 255 155%你确定要退出黄金卡牌游戏？</tip>
+				<tip id="1">%c255 85 255 155%你确定要退出黄金卡牌游戏？%n%血战模式下中途退出卡牌游戏会失去当前赢得的奖励</tip>
+				<tip id="2">%c255 85 255 155%本次卡牌游戏还未结束！</tip>
+				<tip id="3">%c255 85 255 155%卡牌游戏的大奖还未抽取完！</tip>
+			</tips>
+			<!--双倍卡-->
+			<doubleItem id="3901"/>
+			<!-- 节日卡牌 新年版 之 关于每一局的文字提示-->
+			<tipsFestival round="0, 0, 5,15"/>
+			<!-- 新年卡牌的时间配置-->
+			<NewYearTime startTime="2010-04-20 00:00:00" endTime="2021-12-12 23:59:58"/>
+			<!--前五局双倍活动时间配置-->
+			<DoubleInFirst5RoundTime startTime="2014-09-01 00:00:01" endTime="2014-09-30 23:59:58"/>
+			<!--回退道具-->
+			<BackReward>
+				<p>
+					<n color="255,250,150,50">可回退道具给系统，系统返还</n>
+					<object id="3564" textcolor="255,0,255,0" HideBkImg="true"/>
+					<n color="255,250,150,50">x33或</n>
+					<object id="657863" textcolor="255,0,255,0" HideBkImg="true"/>
+					<n color="255,250,150,50">x1</n>
+				</p>
+			</BackReward>
+		</alternate>
+		<alternate id="662514" name="白金卡牌">
+			<!--通用开关配置  0为关闭 1为开启 onlyBloodyBattle指是否直接血战模式 Huasuan指是否适用越开越划算 Discount2指是否适用惠民卡畅玩卡 BackReward指是否适用回退道具 -->
+			<DiscountSwitch onlybloodyBattle="1" Huasuan="0" Discount2="0" BackReward="0"/>
+			<!--双字按钮开关配置  0为关闭 1为开启-->
+			<DoubleBtnSwitch isOpen="0"/>
+			<doubleCheck desc="    使用90个紫金龙鳞或者48个月亮石，可使本局所有卡牌变成双倍金卡，抽中任何卡牌可获得双倍奖励！          注：双倍奖励模式和龙宫模式不能使用双倍金卡" checkItem1="48个月亮石" checkItem2="90个紫金龙鳞">
+			</doubleCheck>
+			<!-- 卡牌火焰文字的优先级显示 priority值越大 优先级越高 注意所有的qualityID 都要配置在这里面-->
+			<ItemPriority>
+				<item qualityID="999903" priority="44"/>
+				<item qualityID="999904" priority="43"/>
+				<item qualityID="999902" priority="42"/>
+				<item qualityID="999901" priority="41"/>
+				<item qualityID="999909" priority="40"/>
+				<item qualityID="999907" priority="39"/>
+				<item qualityID="999908" priority="38"/>
+				<item qualityID="999905" priority="37"/>
+				<item qualityID="999906" priority="36"/>
+				<item qualityID="999911" priority="35"/>
+				<item qualityID="999910" priority="34"/>
+				<item qualityID="999001" priority="33"/>
+				<item qualityID="999002" priority="32"/>
+				<item qualityID="999004" priority="31"/>
+				<item qualityID="999005" priority="30"/>
+				<item qualityID="999007" priority="29"/>
+				<item qualityID="999008" priority="28"/>
+				<item qualityID="999003" priority="27"/>
+				<item qualityID="999006" priority="26"/>
+				<item qualityID="999017" priority="25"/>
+				<item qualityID="999013" priority="24"/>
+				<item qualityID="999031" priority="23"/>
+				<item qualityID="999020" priority="22"/>
+				<item qualityID="999028" priority="21"/>
+				<item qualityID="999019" priority="20"/>
+				<item qualityID="999010" priority="19"/>
+				<item qualityID="999012" priority="18"/>
+				<item qualityID="999014" priority="17"/>
+				<item qualityID="999016" priority="16"/>
+				<item qualityID="999021" priority="15"/>
+				<item qualityID="999024" priority="14"/>
+				<item qualityID="999026" priority="13"/>
+				<item qualityID="999032" priority="12"/>
+				<item qualityID="999030" priority="11"/>
+				<item qualityID="999029" priority="10"/>
+				<item qualityID="999022" priority="9"/>
+				<item qualityID="999015" priority="8"/>
+				<item qualityID="999033" priority="7"/>
+				<item qualityID="999023" priority="6"/>
+				<item qualityID="999011" priority="5"/>
+				<item qualityID="999009" priority="4"/>
+				<item qualityID="999018" priority="3"/>
+				<item qualityID="999025" priority="2"/>
+				<item qualityID="999027" priority="1"/>
+			</ItemPriority>
+			<!--注意名字不能超过17个字!!!!!!-->
+			<goldNeeds maxRound="4">
+				<!-- 某一轮的配置：round，第几轮；gold，需要的金子数，文为单位; tips, 每轮开始前弹出的提示-->
+				<!--tips信息的格式 : 一对 % 里的数据表示对字体颜色等的格式设置，总的如下
+				 %%：表示显示%字符本身；
+				 %c255 255 0 200%：表示以后的字的颜色都为紫色
+				 %n%：换行
+				 %a 1%：对齐方式
+					Top_Left         5
+					Top_Middle       4
+					Top_Right        6
+					Middle_Left      1
+					Middle_Middle    0
+					Middle_Right     2
+					Bottom_Left      9
+					Bottom_Middle    8
+					Bottom_Right    10
+				 %w 28%: 一行文字的总的字符数（这个信息是为了对齐用的，可以不配置，程序会自动计算）
+				 %h 5%: 弹出的提示对话框总共显示几行信息（这个得和gui界面配合才行，可以不配置，程序会自动计算）
+				-->
+				<goldNeed round="1" gold="400" tips="%a0%%c255 250 150 50%开始第一轮白金卡牌游戏需%c255 85 255 155%使用30个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏共分四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.每抽选一张卡牌即可获得对应的道具。"/>
+				<goldNeed round="2" gold="800" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用60个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="3" gold="1600" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用90个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="4" gold="3200" tips="%a0%%c255 250 150 50%继续翻转卡牌需要%c255 85 255 155%使用120个紫金龙鳞%c255 250 150 50%,是否继续?"/>
+				<goldNeed round="5" gold="5000" tips="%a0%%c255 250 150 50%开始一局白金卡牌游戏需%c255 85 255 155%使用300个紫金龙鳞%c255 250 150 50%,是否继续?%n2%%a1%  说明:1.每局游戏可玩四轮，完成四轮后可%c255 85 255 155%免费抽幸运大奖%n%       %c255 250 150 50%2.此模式下如果玩家对获得的道具不满意可回退道具。"/>
+				<!--回退道具的信息：maxRound +2-->
+				<goldNeed round="6" gold="0" tips="%a0%%c255 250 150 50%可回退道具给系统，系统返还100个紫金龙鳞。%n1%"/>
+				<goldNeed round="7" gold="5000" tips="%a0%%c255 250 150 50%开始一局白金卡牌游戏需使用300个紫金龙鳞,是否继续?%n2%%a1%  说明:%c255 255 255 255%1.越开越划算活动,节日卡牌最少只需要%c255 85 255 155%60个紫金龙鳞%n%       %c255 255 255 255%2.11局以上需要%c255 85 255 155%80个龙鳞,%c255 255 255 255%51局以上只需要%c255 85 255 155%60个龙鳞"/>
+			</goldNeeds>
+			<rightItemInfo>
+				<item id="662514" name="白金卡牌" quantifier="张"/>
+				<item id="3564" name="紫金龙鳞" quantifier="个"/>
+			</rightItemInfo>
+			<!--获得紫奖的最大消费金额-->
+			<consume processMax="300000"/>
+			<tips>
+				<tip id="0">%c255 85 255 155%你确定要退出白金卡牌游戏？</tip>
+				<tip id="1">%c255 85 255 155%你确定要退出白金卡牌游戏？%n%血战模式下中途退出卡牌游戏会失去当前赢得的奖励</tip>
+				<tip id="2">%c255 85 255 155%本次卡牌游戏还未结束！</tip>
+				<tip id="3">%c255 85 255 155%卡牌游戏的大奖还未抽取完！</tip>
+			</tips>
+			<!--双倍卡-->
+			<doubleItem id="3901"/>
+			<!-- 节日卡牌 新年版 之 关于每一局的文字提示-->
+			<tipsFestival round="0, 0, 0,15"/>
+			<!-- 新年卡牌的时间配置-->
+			<NewYearTime startTime="2010-04-20 00:00:00" endTime="2021-12-12 23:59:58"/>
+			<!--前五局双倍活动时间配置-->
+			<DoubleInFirst5RoundTime startTime="2014-09-01 00:00:01" endTime="2014-09-30 23:59:58"/>
+			<!--回退道具-->
+			<BackReward>
+				<p>
+					<n color="255,250,150,50">可回退道具给系统，系统返还</n>
+					<object id="3564" textcolor="255,0,255,0" HideBkImg="true"/>
+					<n color="255,250,150,50">x33或</n>
+					<object id="657863" textcolor="255,0,255,0" HideBkImg="true"/>
+					<n color="255,250,150,50">x1</n>
+				</p>
+			</BackReward>
+		</alternate>
+	</alternates>
+	<!-- 卡牌中的小游戏
+	probability：概率，每个数量的概率,及该数量对应的效果图片
+	gameItem：每个游戏项，共三项
+	objectEffect：每个数量对应的特效图片
+	objectItem：每张卡片的基本信息
+	msgTip：提示信息
+ -->
+	<miniGame flipAniPlaySpeed="50">
+		<probability objectID="3564">
+			<probabilityItem num="30" rate="20" pack="data\interfaces.pak" location="256,29"/>
+			<probabilityItem num="35" rate="20" pack="data\interfaces.pak" location="256,30"/>
+			<probabilityItem num="40" rate="20" pack="data\interfaces.pak" location="256,31"/>
+			<probabilityItem num="45" rate="20" pack="data\interfaces.pak" location="256,32"/>
+			<probabilityItem num="50" rate="20" pack="data\interfaces.pak" location="256,33"/>
+		</probability>
+		<probability objectID="799">
+			<probabilityItem num="15" rate="20" pack="data\interfaces.pak" location="256,29"/>
+			<probabilityItem num="20" rate="20" pack="data\interfaces.pak" location="256,30"/>
+			<probabilityItem num="25" rate="20" pack="data\interfaces.pak" location="256,31"/>
+			<probabilityItem num="30" rate="20" pack="data\interfaces.pak" location="256,32"/>
+			<probabilityItem num="35" rate="20" pack="data\interfaces.pak" location="256,33"/>
+		</probability>
+		<probability objectID="2364">
+			<probabilityItem num="10" rate="20" pack="data\interfaces.pak" location="256,29"/>
+			<probabilityItem num="15" rate="20" pack="data\interfaces.pak" location="256,30"/>
+			<probabilityItem num="20" rate="20" pack="data\interfaces.pak" location="256,31"/>
+			<probabilityItem num="25" rate="20" pack="data\interfaces.pak" location="256,32"/>
+			<probabilityItem num="30" rate="20" pack="data\interfaces.pak" location="256,33"/>
+		</probability>
+		<gameItem type="1" info="#a5##c255 240 199 0#      翻中不小于#c255 0 255 0# 5 #c255 240 199 0#的数字可获得奖励#n#        翻中数字#c255 0 255 0# %s #c255 240 199 0#可获得双倍奖励">
+			<objectItem index="2" imageID="116" name="2"/>
+			<objectItem index="4" imageID="118" name="4"/>
+			<objectItem index="5" imageID="119" name="5"/>
+			<objectItem index="7" imageID="121" name="7"/>
+			<objectItem index="8" imageID="122" name="8"/>
+			<objectItem index="9" imageID="123" name="9"/>
+			<msgTip index="0" tip="#a5#   很遗憾，您没有获得奖励，请继续努力！"/>
+			<msgTip index="1" tip="#a5##c255 240 199 0#     恭喜您，获得了#c255 0 255 0# %u #c255 240 199 0#个%s！"/>
+			<msgTip index="2" tip="#a5##c255 240 199 0#  恭喜您翻中#c255 0 255 0#%s#c255 240 199 0#，获得#c255 0 255 0#%u*2#c255 240 199 0#个%s！"/>
+		</gameItem>
+		<gameItem type="2" info="#a5##c255 240 199 0#       翻中#c255 0 255 0# 武器类 #c255 240 199 0#的卡牌可获得奖励#n#        翻中#c255 0 255 0# %s #c255 240 199 0#可获得双倍奖励">
+			<objectItem index="2" objectID="131056" name="戒指"/>
+			<objectItem index="4" objectID="130027" name="铠甲"/>
+			<objectItem index="5" objectID="130328" name="刀"/>
+			<objectItem index="7" objectID="130528" name="杖"/>
+			<objectItem index="8" objectID="130578" name="弓"/>
+			<objectItem index="9" objectID="130628" name="扇"/>
+			<msgTip index="0" tip="#a5#   很遗憾，您没有获得奖励，请继续努力！"/>
+			<msgTip index="1" tip="#a5##c255 240 199 0#      恭喜您，获得了#c255 0 255 0# %u #c255 240 199 0#个%s！"/>
+			<msgTip index="2" tip="#a5##c255 240 199 0#  恭喜您翻中#c255 0 255 0#%s#c255 240 199 0#，获得#c255 0 255 0#%u*2#c255 240 199 0#个%s！"/>
+		</gameItem>
+		<gameItem type="3" info="#a5##c255 240 199 0#      翻中#c255 0 255 0# 材料类 #c255 240 199 0#的卡牌可获得奖励#n#         翻中#c255 0 255 0# %s #c255 240 199 0#可获得双倍奖励">
+			<objectItem index="2" objectID="1298" name="玄麟精魄"/>
+			<objectItem index="4" objectID="2500" name="强化补天"/>
+			<objectItem index="5" objectID="527" name="水晶"/>
+			<objectItem index="7" objectID="517" name="银"/>
+			<objectItem index="8" objectID="537" name="乌木"/>
+			<objectItem index="9" objectID="547" name="硬皮"/>
+			<msgTip index="0" tip="#a5#   很遗憾，您没有获得奖励，请继续努力！"/>
+			<msgTip index="1" tip="#a5##c255 240 199 0#      恭喜您，获得了#c255 0 255 0# %u #c255 240 199 0#个%s！"/>
+			<msgTip index="2" tip="#a5##c255 240 199 0# 恭喜您翻中#c255 0 255 0#%s#c255 240 199 0#，获得#c255 0 255 0#%u*2#c255 240 199 0#个#c255 0 255 0#%s#c255 240 199 0#！"/>
+		</gameItem>
+		<gameItem type="4" info="">
+			<objectItem index="0" objectID="1298" name="玄麟精魄"/>
+			<objectItem index="1" objectID="2500" name="强化补天"/>
+			<objectItem index="2" objectID="527" name="水晶"/>
+			<objectItem index="3" objectID="517" name="银"/>
+			<objectItem index="4" objectID="537" name="乌木"/>
+			<objectItem index="5" objectID="547" name="硬皮"/>
+		</gameItem>
+	</miniGame>
+	<!--卡牌排行榜奖励配置-->
+	<!--第一名的500128和2-10名的500129奖励写死 请不要直接修改-->
+	<CardAardConfig>
+		<!--第一名奖励配置-->
+		<FirstAward>
+			<!--rank: 名次范围， score：能得到奖励的最低积分，awardIds: 奖励物品，textColor: 排行榜当前名次字体颜色-->
+			<award rank="1-1" score="1" awardIds="500133" flags="0" textColor="255,240,255,0"/>
+			<award rank="1-1" score="1000" awardIds="500129,500133" flags="1" textColor="255,240,255,0"/>
+			<award rank="1-1" score="3000" awardIds="500128,500133" flags="2" textColor="255,240,255,0"/>
+			<award rank="1-1" score="20000" awardIds="500128,500133,658168" flags="2" textColor="255,240,255,0"/>
+			<award rank="1-1" score="50000" awardIds="500128,500133,660803" flags="2" textColor="255,240,255,0"/>
+			<award rank="1-1" score="100000" awardIds="500128,500133,662073" flags="2" textColor="255,240,255,0"/>
+		</FirstAward>
+		<!--2-100名奖励-->
+		<OtherSpecialAward>
+			<RankItem rank="2-2">
+				<award rank="2-2" score="1" awardIds="500133" flags="0" textColor="255,0,230,176"/>
+				<award rank="2-2" score="1000" awardIds="500129,500133" flags="1" textColor="255,0,230,176"/>
+				<award rank="2-2" score="20000" awardIds="500129,500133,658168" flags="1" textColor="255,0,230,176"/>
+				<award rank="2-2" score="50000" awardIds="500129,500133,660803" flags="1" textColor="255,0,230,176"/>
+			</RankItem>
+			<RankItem rank="3-3">
+				<award rank="3-3" score="1" awardIds="500133" flags="0" textColor="255,0,230,176"/>
+				<award rank="3-3" score="1000" awardIds="500129,500133" flags="1" textColor="255,0,230,176"/>
+				<award rank="3-3" score="20000" awardIds="500129,500133,658168" flags="1" textColor="255,0,230,176"/>
+			</RankItem>
+			<RankItem rank="4-6">
+				<award rank="4-6" score="1" awardIds="500133" flags="0" textColor="255,77,255,73"/>
+				<award rank="4-6" score="1000" awardIds="500129,500133" flags="1" textColor="255,77,255,73"/>
+			</RankItem>
+			<RankItem rank="7-10">
+				<award rank="7-10" score="1" awardIds="500133" flags="0" textColor="255,77,255,73"/>
+				<award rank="7-10" score="1000" awardIds="500129,500133" flags="1" textColor="255,77,255,73"/>
+			</RankItem>
+			<RankItem rank="11-50">
+				<award rank="11-50" score="0" awardIds="500133" flags="0" textColor="255,228,141,250"/>
+			</RankItem>
+			<RankItem rank="51-100">
+				<award rank="51-100" score="0" awardIds="500134" flags="0" textColor="255,102,135,255"/>
+			</RankItem>
+		</OtherSpecialAward>
+	</CardAardConfig>
+	<!--当日卡牌积分到一定数量时送礼包的活动-->
+	<!--beginDate:活动开始日期 endData:活动结束日期 score:积分达到多少才有奖励-->
+	<CardLiBaoConfig beginDate="2012-05-22 00:00:00" endData="2021-12-12 23:59:59" score="4000">
+		<str id="1" value="今日卡牌积分:%u"/>
+		<str id="2" value="达到分数档次，可获相应奖励"/>
+		<str id="3" value="暂无卡牌积分活动"/>
+		<!--这行没用了-->
+		<str id="4" value="今日卡牌积分达150分可得无暇,300分可领不绑定帝王宝箱,1000分领新帝王神阖,2000分领3天攻击百炼石,5000分领1天碧灵龙马,2.5W分获得五星龙珠,1W到50W分可任选2个指定帝王神石或麒麟之魂(数量增加)，详情见官网。请在当天24时前领取,过期无效。"/>
+	</CardLiBaoConfig>
+	<!--节日卡牌优惠卡 objIds:回馈卡id列表-->
+	<DiscountJoyCard objIds="655375" miniGameBackStartID="" miniGameForeStartID="">
+		<!--购买界面 disCountImage:惠字图标位置-->
+		<BuyUI disCountImage="data\interfaces\256\146">
+			<CardTypeTitle rect="70,350,100,25" color="255,250,150,50"/>
+			<CardDaysTitle rect="185,350,100,25" color="255,250,150,50"/>
+			<TypeRadio startRect="70,380,100,20" YGap="15" color="255,255,255,255"/>
+			<DaysRadio startRect="190,380,100,20" YGap="15" color="255,255,255,255"/>
+			<!--days:总次数从前一个数到后一个数之间 左开右闭-->
+			<CardImage days="0" image="data\interfaces\256\10" effectImage=""/>
+			<CardImage days="10" image="data\interfaces\256\11" effectImage="data\interfaces\256\29"/>
+			<CardImage days="50" image="data\interfaces\256\12" effectImage="data\interfaces\256\30"/>
+			<CardImage days="100" image="data\interfaces\256\13" effectImage="data\interfaces\256\31"/>
+			<CardImage days="200" image="data\interfaces\256\14" effectImage="data\interfaces\256\32"/>
+			<CardImage days="99999999" image="data\interfaces\256\15" effectImage="data\interfaces\256\33"/>
+		</BuyUI>
+		<!--
+	    type:这种卡的类型 ID
+	    timesPerDay:每天的次数
+	    Days:天数
+	    oldPrice:旧的价格
+	    presentPrice:当前价格
+	    discount:折扣率(可以是小数)
+	   -->
+		<CardItem typeID="1" name="一次卡" timesPerDay="1" Days="7" oldPrice="210" presentPrice="190" discount="9"/>
+		<CardItem typeID="2" name="一次卡" timesPerDay="1" Days="15" oldPrice="450" presentPrice="400" discount="8.8"/>
+		<CardItem typeID="3" name="一次卡" timesPerDay="1" Days="30" oldPrice="900" presentPrice="750" discount="8.3"/>
+		<CardItem typeID="4" name="五次卡" timesPerDay="5" Days="7" oldPrice="1050" presentPrice="850" discount="8"/>
+		<CardItem typeID="5" name="五次卡" timesPerDay="5" Days="15" oldPrice="2250" presentPrice="1700" discount="7.5"/>
+		<CardItem typeID="6" name="五次卡" timesPerDay="5" Days="30" oldPrice="4500" presentPrice="3300" discount="7.3"/>
+		<CardItem typeID="7" name="十次卡" timesPerDay="10" Days="7" oldPrice="2100" presentPrice="1650" discount="7.8"/>
+		<CardItem typeID="8" name="十次卡" timesPerDay="10" Days="15" oldPrice="4500" presentPrice="3300" discount="7.3"/>
+		<CardItem typeID="9" name="十次卡" timesPerDay="10" Days="30" oldPrice="9000" presentPrice="6300" discount="7"/>
+		<reward timesPerDay="10">
+			<item round="15" objectID="655375"/>
+			<item round="20" objectID="655375"/>
+		</reward>
+	</DiscountJoyCard>
+	<!--进入豪华龙宫模式-->
+	<effectImg name="enterHaoHuaPurpleMode" x="331" y="262" loop="false" pack="data\interfaces.gl" group="256" frame="151"/>
+	<!--卡牌优惠2 （惠民卡 畅玩卡） kind顺序不要变(或者与服务器保存一致) showFlag =1 为显示-->
+	<JoyCardDiscount2>
+		<item type="1" startTime="2013-1-22 00:00:00" endTime="2033-10-23 23:59:59" name="惠民卡" desc="惠民卡：在10天时间内，可免费享受任意5天节日卡牌血战到底模式的第一局。需要在有效天数内使用完次数，过期无效；有效天数结束后才可再次购买。惠民卡需不绑定龙鳞购买；惠民卡和畅玩卡只能同时购买一种。    注：购买当天视为第一天，有效期至最后一天24时截止。">
+			<subItem kind="1" content="5次首局机会，有效期10天" days="10" counts="5" oldPrice="150" discountPrice="120" showFlag="1"/>
+			<subItem kind="2" content="10次首局机会，有效期15天" days="15" counts="10" oldPrice="300" discountPrice="255" showFlag="0"/>
+			<subItem kind="3" content="20次首局机会，有效期30天" days="30" counts="20" oldPrice="600" discountPrice="480" showFlag="0"/>
+		</item>
+		<item type="2" startTime="2013-1-22 00:00:00" endTime="2033-10-23 23:59:59" name="畅玩卡" desc="购买畅玩卡后可获得一定数量的节日卡牌血战到底游戏次数，有效天数内可随意使用，过期无效。有效天数结束后才可再次购买。畅玩卡需不绑定龙鳞购买；惠民卡和畅玩卡只能同时购买一种。      注：购买当天视为第一天，有效期至最后一天24时截止。">
+			<subItem kind="1" content="180次游戏机会，有效期7天" days="7" counts="180" discountPrice="5000" awardItemID="655845" awardItemName="指定攻防百炼石x2" awardItemColor="255 ,85, 255, 155" showFlag="1"/>
+			<subItem kind="2" content="540次游戏机会，有效期7天" days="7" counts="540" discountPrice="15000" awardItemID="655618" awardItemName="指定7天武器神器" awardItemColor="255 ,85, 255, 155" showFlag="1"/>
+			<subItem kind="3" content="350次游戏机会，有效期7天" days="7" counts="350" discountPrice="10000" awardItemID="655618" awardItemName="指定7天武器神器" awardItemColor="255, 222, 40, 255" showFlag="0"/>
+		</item>
+	</JoyCardDiscount2>
+	<!--强紫卡片: 下面添加的qualityid就是强紫-->
+	<PerfectPurpleCard qualityIDs="17004,21112,18998,18999,18994,21116,21117,14008,11100,18996,18997,21122,13999,13992,13993,13995,13998,13996,13994,13997,17802,21118,888100,888110,888120,888130,888140,888150,888160,888170,888630,888650,888840,888930,889300,889902,889912,888920,889990,890350,890450,890550,890750,890850,890950,999901,999902,999903,999904,999905,999906,999907,999908,999909,999910,999911"/>
+	<!--卡牌优化之-越开越便宜  活动时间配置-->
+	<TimeCfg StartTime="2015-03-13 00:00:00" EndTime="2015-03-19 23:59:59"/>
+	<!--卡牌优化之-越开越便宜  按照开卡牌局数的折扣信息-->
+	<DiscountCfg>
+		<!--min,max: 开卡牌的局数，itemNum:下一阶段需要龙鳞数 -->
+		<item min="0" max="10" itemNum="25"> </item>
+		<item min="11" max="50" itemNum="20"> </item>
+		<item min="51" max="999999" itemNum="20"> </item>
+	</DiscountCfg>
+	<!--活动期间，每开一局黄金卡牌给道具 -->
+	<GoldRebate StartTime="2016-05-11 00:00:00" EndTime="2026-05-31 23:59:59" ObjId="662451"/>
+	<!--活动期间，每开一局白金卡牌给道具 -->
+	<BaiJinRebate StartTime="2016-06-03 00:00:00" EndTime="2016-07-01 23:59:59" ObjId="3564"/>
+	<!--黄金卡牌前五局双倍活动时间配置-->
+	<DoubleInFirst5RoundTime times="10" startTime="2016-11-01 00:00:01" endTime="2016-11-16 00:00:00"/>
+	<!--白金卡牌前五局双倍活动时间配置-->
+	<DoubleInFirst5RoundTimeBaiJin times="11" rounds="22,33,44,55,66,77,88,99,110,121,132,143,154,165,176,187,198" startTime="2016-11-09 00:00:01" endTime="2016-11-12 00:00:00"/>
+</JoyCard>

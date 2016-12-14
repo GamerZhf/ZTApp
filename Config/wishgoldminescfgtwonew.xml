@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="gb2312"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<goldMinesCfg>
+	<itemList>
+		<!--
+			id : 物品ID
+			name : 物品名称
+			color : 条目显示颜色
+			number="1" flash="1" 是否有光圈
+		-->
+		<item id="658168" weight="100" name="火麟剑（永久）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="656992" weight="99" name="烈焰战马（永久）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655628" weight="98" name="金鳞天狼（永久）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657749" weight="97" name="玉娇龙精魄包（永久）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="656105" weight="96" name="雪狼精魄（永久）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655159" weight="95" name="恭福熊猫（永久）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655739" weight="94" name="蝎子王（永久）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659843" weight="93" name="帝王灵兽(资质11）(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659840" weight="89" name="帝王灵兽(资质8）(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="661394" weight="85" name="百炼升级令（防御）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="3950" weight="50" name="龙纪元之书(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657859" weight="74" name="五行命石" number="1" flash="1" color="255,239,231,8"/>
+		<item id="656477" weight="70" name="定魂丹" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659846" weight="75" name="新法宝天赋技能书" number="1" flash="1" color="255,239,231,8"/>
+		<item id="660481" weight="85" name="高属性单技能卡" number="1" flash="1" color="255,239,231,8"/>
+		<item id="660501" weight="78" name="五行星云-黄" number="1" flash="1" color="255,239,231,8"/>
+		<item id="660502" weight="79" name="五行星云-绿" number="1" flash="1" color="255,239,231,8"/>
+		<item id="660503" weight="80" name="五行星云-紫" number="1" flash="1" color="255,239,231,8"/>
+		<item id="658782" weight="83" name="冥龙之心" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659189" weight="84" name="凤纹" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659598" weight="81" name="帝王草" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659600" weight="80" name="帝王玉" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659647" weight="74" name="卡槽经验丹（120-139）(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659648" weight="75" name="卡槽经验丹（140-149）(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659649" weight="76" name="卡槽经验丹（150-159）(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659650" weight="77" name="卡槽经验丹（160-169）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659651" weight="78" name="卡槽经验丹（170-179）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659652" weight="79" name="卡槽经验丹（180-189）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="659653" weight="80" name="卡槽经验丹（190-199）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657733" weight="80" name="天赋进阶丹（紫）(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="5298" weight="85" name="远古龙魂" number="1" flash="1" color="255,239,231,8"/>
+		<item id="5299" weight="82" name="远古龙晶" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657816" weight="75" name="迷你天使之心" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657960" weight="90" name="指定紫色绝技(10级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657959" weight="89" name="指定紫色绝技(9级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657958" weight="88" name="指定紫色绝技(8级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657957" weight="87" name="指定紫色绝技(7级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657956" weight="86" name="指定紫色绝技(6级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657884" weight="85" name="指定紫色绝技(5级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655367" weight="91" name="升星石(13星)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="656647" weight="93" name="完美紫朱雀顶级技能卡片(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655685" weight="70" name="四星龙珠" number="1" color="255,239,231,8"/>
+		<item id="655603" weight="83" name="8灵性圣马（未鉴定）(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="658411" weight="81" name="混沌阳极符(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655683" weight="70" name="二星龙珠" number="1" color="255,239,231,8"/>
+		<item id="657883" weight="80" name="指定紫色绝技(4级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="658260" weight="79" name="征途传锦囊（2个）" number="2" flash="1" color="255,239,231,8"/>
+		<item id="655409" weight="40" name="圣灵如风(非绑)" number="1" color="255,239,231,8"/>
+		<item id="655411" weight="52" name="祝福的圣灵羽(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="5958" weight="79" name="成年的神龙王(雄)(非绑)" number="1" color="255,239,231,8"/>
+		<item id="5959" weight="79" name="成年的神龙王(雌)(非绑)" number="1" color="255,239,231,8"/>
+		<item id="5934" weight="51" name="指定稀有魂魄石" number="1" color="255,239,231,8"/>
+		<item id="656536" weight="50" name="龙石卡(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="656989" weight="49" name="成品职业宝石兑换券(非绑)" number="1" color="255,239,231,8"/>
+		<item id="655977" weight="0" name="天赋强化丹" number="2" color="255,239,231,8"/>
+		<item id="659130" weight="78" name="魔法扫帚（1天）(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655155" weight="92" name="龙年纪念章(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655777" weight="73" name="珍稀的蝎钳（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="656103" weight="72" name="珍稀的狼毫（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657736" weight="80" name="玉娇龙精魄（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655700" weight="76" name="金鳞天狼（1天）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="658165" weight="75" name="烈焰战马（1天）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657112" weight="74" name="玄冰马（1天）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="658167" weight="77" name="火麟剑（1天）（非绑）" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655366" weight="80" name="升星石(12星)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657882" weight="81" name="指定紫色绝技(3级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655365" weight="82" name="升星石(11星)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657881" weight="71" name="指定紫色绝技(2级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657732" weight="66" name="天赋进阶丹（绿）(非绑)" number="1" color="255,239,231,8"/>
+		<item id="657880" weight="70" name="指定紫色绝技(1级)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655364" weight="80" name="升星石(10星)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="658171" weight="64" name="圣马碎片" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657731" weight="65" name="天赋进阶丹（黄）(非绑)" number="1" color="255,239,231,8"/>
+		<item id="655363" weight="54" name="升星石(9星)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657730" weight="0" name="天赋进阶丹（蓝）(非绑)" number="1" color="255,239,231,8"/>
+		<item id="655886" weight="0" name="天赋活化丹(非绑)" number="1" color="255,239,231,8"/>
+		<item id="657319" weight="65" name="五行碎片-黄(非绑)" number="1" color="255,239,231,8"/>
+		<item id="657320" weight="67" name="五行碎片-绿(非绑)" number="1" color="255,239,231,8"/>
+		<item id="657321" weight="69" name="五行碎片-紫(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="655786" weight="55" name="紫色绝技" number="1" flash="1" color="255,239,231,8"/>
+		<item id="5923" weight="54" name="成年的龙王(雄)(非绑)" number="1" color="255,239,231,8"/>
+		<item id="655362" weight="53" name="升星石(8星)(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="2887" weight="52" name="材料锦囊包10000" number="1" flash="1" color="255,239,231,8"/>
+		<item id="2552" weight="0" name="冰鳞" number="1" color="255,239,231,8"/>
+		<item id="3888" weight="51" name="万元礼包" number="1" flash="1" color="255,239,231,8"/>
+		<item id="5924" weight="59" name="成年的龙王(雌)(非绑)" number="1" color="255,239,231,8"/>
+		<item id="656971" weight="60" name="完美紫色经验卡(非绑)" number="1" flash="1" color="255,239,231,8"/>
+		<item id="4746" weight="41" name="指定护身符宝石锦囊" number="1" color="255,239,231,8"/>
+		<item id="656342" weight="40" name="绿色绝技" number="1" color="255,239,231,8"/>
+		<item id="3569" weight="38" name="烟花（20个）" number="20" flash="1" color="255,239,231,8"/>
+		<item id="3569" weight="0" name="烟花（5个）" number="5" color="255,239,231,8"/>
+		<item id="5951" weight="0" name="千元礼包" number="1" flash="1" color="255,239,231,8"/>
+		<item id="656343" weight="0" name="黄色绝技" number="2" color="255,239,231,8"/>
+		<item id="5950" weight="0" name="四佰元礼包" number="1" color="255,239,231,8"/>
+		<item id="799" weight="31" name="无暇升级宝石（50个）" number="50" flash="1" color="255,239,231,8"/>
+		<item id="799" weight="0" name="无暇升级宝石（10个）" number="10" color="255,239,231,8"/>
+		<item id="655235" weight="30" name="斗魂丹（50个）" number="50" color="255,239,231,8"/>
+		<item id="655235" weight="0" name="斗魂丹（10个）" number="10" color="255,239,231,8"/>
+		<item id="655572" weight="30" name="元气丹（50个）" number="50" color="255,239,231,8"/>
+		<item id="655572" weight="0" name="元气丹（10个）" number="10" color="255,239,231,8"/>
+		<item id="3697" weight="0" name="一百元礼包" number="1" color="255,239,231,8"/>
+		<item id="2945" weight="39" name="灵魂丹（已付费）（50个）" number="50" flash="1" color="255,239,231,8"/>
+		<item id="2945" weight="0" name="灵魂丹（已付费）（20个）" number="20" color="255,239,231,8"/>
+		<item id="2945" weight="0" name="灵魂丹（已付费）（5个）" number="5" color="255,239,231,8"/>
+		<item id="2990" weight="0" name="灵气丹（20个）" number="20" color="255,239,231,8"/>
+		<item id="2795" weight="0" name="百仙果（30个）" number="30" color="255,239,231,8"/>
+		<item id="1578" weight="38" name="通用材料卡（500张）" number="500" flash="1" color="255,239,231,8"/>
+		<item id="1578" weight="0" name="通用材料卡（200张）" number="200" color="255,239,231,8"/>
+		<item id="1578" weight="0" name="通用材料卡（100张）" number="100" color="255,239,231,8"/>
+		<item id="1578" weight="0" name="通用材料卡（50张）" number="50" color="255,239,231,8"/>
+		<item id="1328" weight="0" name="鲜花（999个）" number="999" color="255,239,231,8"/>
+		<item id="1328" weight="0" name="鲜花（99个）" number="99" color="255,239,231,8"/>
+		<item id="657319" weight="65" name="五行碎片-黄" number="1" color="255,239,231,8"/>
+		<item id="657320" weight="67" name="五行碎片-绿" number="1" flash="1" color="255,239,231,8"/>
+		<item id="657321" weight="69" name="五行碎片-紫" number="1" flash="1" color="255,239,231,8"/>
+		<item id="2900" weight="37" name="蓝色妖姬（99个）" number="99" flash="1" color="255,239,231,8"/>
+		<item id="2900" weight="0" name="蓝色妖姬（9个）" number="9" color="255,239,231,8"/>
+		<item id="656017" weight="0" name="指定马饲料（10个）" number="1" color="255,239,231,8"/>
+	</itemList>
+	<toolTips>
+		<Tip id="1" text="一次性消耗10个黄金锄获得10个奖励。"/>
+		<Tip id="2" text="提取当前所有奖励。"/>
+		<Tip id="3" text="系统回收所有奖励，给予玩家3个黄金锄。"/>
+		<Tip id="4" text="可以返还3个黄金锄，确定回退吗？"/>
+		<Tip id="5" text="截止至3月31号开金山提取将会获得额外奖励：人气金山抽奖券！回退不能获得额外奖励"/>
+	</toolTips>
+	
+	<!-- 可直接打开金山界面的道具列表 -->
+	<material ids="657992,661627,659847,661219,661627,662089,661008"/>
+</goldMinesCfg>
